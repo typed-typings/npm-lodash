@@ -65,14 +65,14 @@
       "avoid-escape"
     ],
     "radix": true,
-    "semicolon": false,
+    "semicolon": [true, "always"],
     "switch-default": true,
     "trailing-comma": false,
     "triple-equals": [
       true,
       "allow-null-check"
     ],
-    "typedef": false,
+    "typedef": [false],
     "typedef-whitespace": [
       true,
       {
@@ -83,7 +83,7 @@
         "variable-declaration": "nospace"
       }
     ],
-    "use-strict": false,
+    "use-strict": [false],
     "variable-name": [
       true,
       "check-format",
