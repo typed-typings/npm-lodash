@@ -1,3 +1,10 @@
 /// <reference path="../bundle.d.ts" />
+/// <reference path="../typings/main.d.ts" />
 
-import * as lodash from 'lodash';
+import * as _ from 'lodash';
+import * as test from 'blue-tape';
+
+test('test', (t) => {
+  t.plan(1);
+  t.equal(_.add(1, 2), 3);
+});

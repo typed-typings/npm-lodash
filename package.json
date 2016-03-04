@@ -5,8 +5,8 @@
   "author": "unional",
   "license": "MIT",
   "scripts": {
-    "bundle": "typings bundle . -o bundle.d.ts",
-    "test": "npm run bundle && ts-node test/test.ts"
+    "build": "typings bundle . -o bundle.d.ts",
+    "test": "ts-node test/test.ts"
   },
   "directories": {
     "test": "test"
@@ -26,6 +26,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "blue-tape": "^0.2.0",
     "lodash": "^4.6.1",
     "ts-node": "^0.5.5",
     "tslint": "^3.5.0",

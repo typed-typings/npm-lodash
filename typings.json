@@ -1,5 +1,8 @@
 {
   "name": "lodash",
   "main": "index.d.ts",
-  "homepage": "https://github.com/lodash/lodash"
+  "homepage": "https://github.com/lodash/lodash",
+  "devDependencies": {
+    "blue-tape": "github:typed-typings/npm-blue-tape#00f0bcdfebaea97656da3607b93bb68d2aaaf730"
+  }
 }
