@@ -1,5 +1,4 @@
 /// <reference path="../bundle.d.ts" />
-/// <reference path="../typings/main.d.ts" />
 
 import * as _ from 'lodash';
 import * as test from 'blue-tape';
