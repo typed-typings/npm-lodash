@@ -1,35 +1,14 @@
 {
-  "name": "npm-lodash",
-  "description": "The type definition for https://github.com/lodash/lodash",
-  "version": "0.0.1",
-  "author": "unional",
-  "license": "MIT",
   "scripts": {
     "build": "typings bundle . -o bundle.d.ts",
     "test": "ts-node test/test.ts"
   },
-  "directories": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/typed-typings/npm-lodash.git"
-  },
-  "homepage": "https://github.com/typed-typings/npm-lodash#readme",
-  "keywords": [
-    "typings",
-    "typed",
-    "lodash"
-  ],
-  "bugs": {
-    "url": "https://github.com/typed-typings/npm-lodash/issues"
-  },
-  "dependencies": {},
+  "private": true,
   "devDependencies": {
     "blue-tape": "^0.2.0",
     "lodash": "^4.6.1",
     "ts-node": "^0.5.5",
     "tslint": "^3.5.0",
-    "typescript": "^1.8.2"
+    "typescript": "^1.8.7"
   }
 }
