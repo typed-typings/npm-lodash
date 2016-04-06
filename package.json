@@ -2,9 +2,9 @@
   "private": true,
   "scripts": {
     "build": "echo building... && typings bundle -o out",
-    "lint": "echo linting... && tslint \"**/*.ts\" -e \"node_modules/**\" -e \"source/**\"  -e \"source-test/**\" -e \"out/**\" -e \"typings/**\"",
+    "lint": "echo linting... && tslint \"**/*.ts\" -e \"source/**\" -e \"source-test/**\" -e \"out/**\" -e \"node_modules/**\" -e \"typings/**\"",
     "test": "echo testing... && cd test && ts-node ../node_modules/blue-tape/bin/blue-tape \"**/*.ts\" | tap-spec",
-    "source-test": "echo source-testing... && cd source-test && mocha --require ts-node/register \"**/*.ts\"",
+    "source-test": "echo source-testing... && echo no source-test configured",
     "watch": "onchange \"**/*.ts\" -i -e \"out/**\" -- npm -s run build+test",
     "publish": "npm -s run lint+build+test && echo please publish to typings/registry",
     "source-test+test": "npm run source-test && npm test",

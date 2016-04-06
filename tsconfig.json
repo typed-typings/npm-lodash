@@ -9,6 +9,7 @@
     "typings/browser",
     "typings/browser.d.ts",
     "out/browser.d.ts",
-    "source"
+    "source",
+    "global"
   ]
 }
