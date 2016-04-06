@@ -1,0 +1,4 @@
+[submodule "source"]
+	path = source
+	url = https://github.com/lodash/lodash.git
+	branch = 4.0.0

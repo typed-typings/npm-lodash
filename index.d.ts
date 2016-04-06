@@ -1,9 +1,3 @@
-// Type definitions for Lo-Dash
-// Project: http://lodash.com/
-// Definitions by: Brian Zengel <https://github.com/bczengel>, Ilya Mochalov <https://github.com/chrootsu>
-// Definitions: https://github.com/borisyankov/DefinitelyTyped
-
-
 /**
 ### 4.0.0 Changelog (https://github.com/lodash/lodash/wiki/Changelog)
 
@@ -238,7 +232,7 @@ Methods:
 
 declare var _: _.LoDashStatic;
 
-declare module _ {
+declare namespace _ {
     interface LoDashStatic {
         /**
         * Creates a lodash object which wraps the given value to enable intuitive method chaining.
