@@ -1,4 +1,4 @@
-/**
+/*
 ### 4.0.0 Changelog (https://github.com/lodash/lodash/wiki/Changelog)
 
 #### TODO:
@@ -235,36 +235,36 @@ declare var _: _.LoDashStatic;
 declare namespace _ {
   interface LoDashStatic {
     /**
-    * Creates a lodash object which wraps the given value to enable intuitive method chaining.
-    *
-    * In addition to Lo-Dash methods, wrappers also have the following Array methods:
-    * concat, join, pop, push, reverse, shift, slice, sort, splice, and unshift
-    *
-    * Chaining is supported in custom builds as long as the value method is implicitly or
-    * explicitly included in the build.
-    *
-    * The chainable wrapper functions are:
-    * after, assign, bind, bindAll, bindKey, chain, chunk, compact, compose, concat, countBy,
-    * createCallback, curry, debounce, defaults, defer, delay, difference, filter, flatten,
-    * forEach, forEachRight, forIn, forInRight, forOwn, forOwnRight, functions, groupBy,
-    * keyBy, initial, intersection, invert, invoke, keys, map, max, memoize, merge, min,
-    * object, omit, once, pairs, partial, partialRight, pick, pluck, pull, push, range, reject,
-    * remove, rest, reverse, sample, shuffle, slice, sort, sortBy, splice, tap, throttle, times,
-    * toArray, transform, union, uniq, unset, unshift, unzip, values, where, without, wrap, and zip
-    *
-    * The non-chainable wrapper functions are:
-    * clone, cloneDeep, contains, escape, every, find, findIndex, findKey, findLast,
-    * findLastIndex, findLastKey, has, identity, indexOf, isArguments, isArray, isBoolean,
-    * isDate, isElement, isEmpty, isEqual, isFinite, isFunction, isNaN, isNull, isNumber,
-    * isObject, isPlainObject, isRegExp, isString, isUndefined, join, lastIndexOf, mixin,
-    * noConflict, parseInt, pop, random, reduce, reduceRight, result, shift, size, some,
-    * sortedIndex, runInContext, template, unescape, uniqueId, and value
-    *
-    * The wrapper functions first and last return wrapped values when n is provided, otherwise
-    * they return unwrapped values.
-    *
-    * Explicit chaining can be enabled by using the _.chain method.
-    **/
+     * Creates a lodash object which wraps the given value to enable intuitive method chaining.
+     *
+     * In addition to Lo-Dash methods, wrappers also have the following Array methods:
+     * concat, join, pop, push, reverse, shift, slice, sort, splice, and unshift
+     *
+     * Chaining is supported in custom builds as long as the value method is implicitly or
+     * explicitly included in the build.
+     *
+     * The chainable wrapper functions are:
+     * after, assign, bind, bindAll, bindKey, chain, chunk, compact, compose, concat, countBy,
+     * createCallback, curry, debounce, defaults, defer, delay, difference, filter, flatten,
+     * forEach, forEachRight, forIn, forInRight, forOwn, forOwnRight, functions, groupBy,
+     * keyBy, initial, intersection, invert, invoke, keys, map, max, memoize, merge, min,
+     * object, omit, once, pairs, partial, partialRight, pick, pluck, pull, push, range, reject,
+     * remove, rest, reverse, sample, shuffle, slice, sort, sortBy, splice, tap, throttle, times,
+     * toArray, transform, union, uniq, unset, unshift, unzip, values, where, without, wrap, and zip
+     *
+     * The non-chainable wrapper functions are:
+     * clone, cloneDeep, contains, escape, every, find, findIndex, findKey, findLast,
+     * findLastIndex, findLastKey, has, identity, indexOf, isArguments, isArray, isBoolean,
+     * isDate, isElement, isEmpty, isEqual, isFinite, isFunction, isNaN, isNull, isNumber,
+     * isObject, isPlainObject, isRegExp, isString, isUndefined, join, lastIndexOf, mixin,
+     * noConflict, parseInt, pop, random, reduce, reduceRight, result, shift, size, some,
+     * sortedIndex, runInContext, template, unescape, uniqueId, and value
+     *
+     * The wrapper functions first and last return wrapped values when n is provided, otherwise
+     * they return unwrapped values.
+     *
+     * Explicit chaining can be enabled by using the _.chain method.
+     */
     (value: number): LoDashImplicitWrapper<number>;
     (value: string): LoDashImplicitStringWrapper;
     (value: boolean): LoDashImplicitWrapper<boolean>;
@@ -274,45 +274,45 @@ declare namespace _ {
     (value: any): LoDashImplicitWrapper<any>;
 
     /**
-    * The semantic version number.
-    **/
+     * The semantic version number.
+     */
     VERSION: string;
 
     /**
-    * By default, the template delimiters used by Lo-Dash are similar to those in embedded Ruby
-    * (ERB). Change the following template settings to use alternative delimiters.
-    **/
+     * By default, the template delimiters used by Lo-Dash are similar to those in embedded Ruby
+     * (ERB). Change the following template settings to use alternative delimiters.
+     */
     templateSettings: TemplateSettings;
   }
 
   /**
-  * By default, the template delimiters used by Lo-Dash are similar to those in embedded Ruby
-  * (ERB). Change the following template settings to use alternative delimiters.
-  **/
+   * By default, the template delimiters used by Lo-Dash are similar to those in embedded Ruby
+   * (ERB). Change the following template settings to use alternative delimiters.
+   */
   interface TemplateSettings {
     /**
-    * The "escape" delimiter.
-    **/
+     * The "escape" delimiter.
+     */
     escape?: RegExp;
 
     /**
-    * The "evaluate" delimiter.
-    **/
+     * The "evaluate" delimiter.
+     */
     evaluate?: RegExp;
 
     /**
-    * An object to import into the template as local variables.
-    **/
+     * An object to import into the template as local variables.
+     */
     imports?: Dictionary<any>;
 
     /**
-    * The "interpolate" delimiter.
-    **/
+     * The "interpolate" delimiter.
+     */
     interpolate?: RegExp;
 
     /**
-    * Used to reference the data object in the template text.
-    **/
+     * Used to reference the data object in the template text.
+     */
     variable?: string;
   }
 
@@ -386,9 +386,9 @@ declare namespace _ {
 
   /*********
    * Array *
-   *********/
+   ********/
 
-  //_.chunk
+  // _.chunk
   interface LoDashStatic {
     /**
      * Creates an array of elements split into groups the length of size. If collection can’t be split evenly, the
@@ -432,7 +432,7 @@ declare namespace _ {
     chunk<TResult>(size?: number): LoDashExplicitArrayWrapper<TResult[]>;
   }
 
-  //_.compact
+  // _.compact
   interface LoDashStatic {
     /**
      * Creates an array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are
@@ -472,7 +472,7 @@ declare namespace _ {
     compact<TResult>(): LoDashExplicitArrayWrapper<TResult>;
   }
 
-  //_.concat DUMMY
+  // _.concat DUMMY
   interface LoDashStatic {
     /**
      * Creates a new array concatenating `array` with any additional arrays
@@ -498,7 +498,7 @@ declare namespace _ {
     concat<T>(...values: (T[] | List<T>)[]): T[];
   }
 
-  //_.difference
+  // _.difference
   interface LoDashStatic {
     /**
      * Creates an array of unique array values not included in the other provided arrays using SameValueZero for
@@ -542,7 +542,7 @@ declare namespace _ {
     difference<TValue>(...values: (TValue[] | List<TValue>)[]): LoDashExplicitArrayWrapper<TValue>;
   }
 
-  //_.differenceBy
+  // _.differenceBy
   interface LoDashStatic {
     /**
      * This method is like _.difference except that it accepts iteratee which is invoked for each element of array
@@ -1106,7 +1106,7 @@ declare namespace _ {
     ): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.differenceWith DUMMY
+  // _.differenceWith DUMMY
   interface LoDashStatic {
     /**
      * Creates an array of unique `array` values not included in the other
@@ -1130,7 +1130,7 @@ declare namespace _ {
     ): any[];
   }
 
-  //_.drop
+  // _.drop
   interface LoDashStatic {
     /**
      * Creates a slice of array with n elements dropped from the beginning.
@@ -1170,7 +1170,7 @@ declare namespace _ {
     drop<T>(n?: number): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.dropRight
+  // _.dropRight
   interface LoDashStatic {
     /**
      * Creates a slice of array with n elements dropped from the end.
@@ -1213,7 +1213,7 @@ declare namespace _ {
     dropRight<TResult>(n?: number): LoDashExplicitArrayWrapper<TResult>;
   }
 
-  //_.dropRightWhile
+  // _.dropRightWhile
   interface LoDashStatic {
     /**
      * Creates a slice of array excluding elements dropped from the end. Elements are dropped until predicate
@@ -1357,7 +1357,7 @@ declare namespace _ {
     ): LoDashExplicitArrayWrapper<TValue>;
   }
 
-  //_.dropWhile
+  // _.dropWhile
   interface LoDashStatic {
     /**
      * Creates a slice of array excluding elements dropped from the beginning. Elements are dropped until predicate
@@ -1501,7 +1501,7 @@ declare namespace _ {
     ): LoDashExplicitArrayWrapper<TValue>;
   }
 
-  //_.fill
+  // _.fill
   interface LoDashStatic {
     /**
      * Fills elements of array with value from start up to, but not including, end.
@@ -1576,7 +1576,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<List<T>>;
   }
 
-  //_.findIndex
+  // _.findIndex
   interface LoDashStatic {
     /**
      * This method is like _.find except that it returns the index of the first element predicate returns truthy
@@ -1720,7 +1720,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<number>;
   }
 
-  //_.findLastIndex
+  // _.findLastIndex
   interface LoDashStatic {
     /**
      * This method is like _.findIndex except that it iterates over elements of collection from right to left.
@@ -1863,11 +1863,11 @@ declare namespace _ {
     ): LoDashExplicitWrapper<number>;
   }
 
-  //_.first
+  // _.first
   interface LoDashStatic {
 		/**
-         * @see _.head
-         */
+     * @see _.head
+     */
     first<T>(array: List<T>): T;
   }
 
@@ -1888,7 +1888,7 @@ declare namespace _ {
   interface RecursiveArray<T> extends Array<T | RecursiveArray<T>> { }
   interface ListOfRecursiveArraysOrValues<T> extends List<T | RecursiveArray<T>> { }
 
-  //_.flatMap DUMMY
+  // _.flatMap DUMMY
   interface LoDashStatic {
     /**
      * Creates an array of flattened values by running each element in `array`
@@ -1916,7 +1916,7 @@ declare namespace _ {
     ): any[];
   }
 
-  //_.flatten
+  // _.flatten
   interface LoDashStatic {
     /**
      * Flattens a nested array. If isDeep is true the array is recursively flattened, otherwise it’s only
@@ -1981,7 +1981,7 @@ declare namespace _ {
     flatten<TResult>(isDeep?: boolean): LoDashExplicitArrayWrapper<TResult>;
   }
 
-  //_.flattenDeep
+  // _.flattenDeep
   interface LoDashStatic {
     /**
      * Recursively flattens a nested array.
@@ -2034,7 +2034,7 @@ declare namespace _ {
     flattenDeep<T>(): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.fromPairs DUMMY
+  // _.fromPairs DUMMY
   interface LoDashStatic {
     /**
      * The inverse of `_.toPairs`; this method returns an object composed
@@ -2055,7 +2055,7 @@ declare namespace _ {
     ): any[];
   }
 
-  //_.head
+  // _.head
   interface LoDashStatic {
     /**
      * Gets the first element of array.
@@ -2082,7 +2082,7 @@ declare namespace _ {
     head<TResult>(): TResult;
   }
 
-  //_.indexOf
+  // _.indexOf
   interface LoDashStatic {
     /**
      * Gets the index at which the first occurrence of `value` is found in `array`
@@ -2154,7 +2154,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<number>;
   }
 
-  //_.intersectionBy DUMMY
+  // _.intersectionBy DUMMY
   interface LoDashStatic {
     /**
      * This method is like `_.intersection` except that it accepts `iteratee`
@@ -2182,7 +2182,7 @@ declare namespace _ {
     ): any[];
   }
 
-  //_.intersectionWith DUMMY
+  // _.intersectionWith DUMMY
   interface LoDashStatic {
     /**
      * This method is like `_.intersection` except that it accepts `comparator`
@@ -2209,7 +2209,7 @@ declare namespace _ {
     ): any[];
   }
 
-  //_.join
+  // _.join
   interface LoDashStatic {
     /**
      * Converts all elements in `array` into a string separated by `separator`.
@@ -2266,7 +2266,7 @@ declare namespace _ {
     join(separator?: string): LoDashExplicitWrapper<string>;
   }
 
-  //_.pullAll DUMMY
+  // _.pullAll DUMMY
   interface LoDashStatic {
     /**
      * This method is like `_.pull` except that it accepts an array of values to remove.
@@ -2293,7 +2293,7 @@ declare namespace _ {
     ): any[];
   }
 
-  //_.pullAllBy DUMMY
+  // _.pullAllBy DUMMY
   interface LoDashStatic {
     /**
      * This method is like `_.pullAll` except that it accepts `iteratee` which is
@@ -2323,7 +2323,7 @@ declare namespace _ {
     ): any[];
   }
 
-  //_.reverse DUMMY
+  // _.reverse DUMMY
   interface LoDashStatic {
     /**
      * Reverses `array` so that the first element becomes the last, the second
@@ -2351,7 +2351,7 @@ declare namespace _ {
     ): any[];
   }
 
-  //_.sortedIndexOf
+  // _.sortedIndexOf
   interface LoDashStatic {
     /**
      * This method is like `_.indexOf` except that it performs a binary
@@ -2410,7 +2410,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<number>;
   }
 
-  //_.initial
+  // _.initial
   interface LoDashStatic {
     /**
      * Gets all but the last element of array.
@@ -2449,7 +2449,7 @@ declare namespace _ {
     initial<T>(): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.intersection
+  // _.intersection
   interface LoDashStatic {
     /**
      * Creates an array of unique values that are included in all of the provided arrays using SameValueZero for
@@ -2489,7 +2489,7 @@ declare namespace _ {
     intersection<TResult>(...arrays: (TResult[] | List<TResult>)[]): LoDashExplicitArrayWrapper<TResult>;
   }
 
-  //_.last
+  // _.last
   interface LoDashStatic {
     /**
      * Gets the last element of array.
@@ -2528,7 +2528,7 @@ declare namespace _ {
     last<T>(): LoDashExplicitObjectWrapper<T>;
   }
 
-  //_.lastIndexOf
+  // _.lastIndexOf
   interface LoDashStatic {
     /**
      * This method is like _.indexOf except that it iterates over elements of array from right to left.
@@ -2585,7 +2585,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<number>;
   }
 
-  //_.pull
+  // _.pull
   interface LoDashStatic {
     /**
      * Removes all provided values from array using SameValueZero for equality comparisons.
@@ -2638,7 +2638,7 @@ declare namespace _ {
     pull<TValue>(...values: TValue[]): LoDashExplicitObjectWrapper<List<TValue>>;
   }
 
-  //_.pullAt
+  // _.pullAt
   interface LoDashStatic {
     /**
      * Removes elements from array corresponding to the given indexes and returns an array of the removed elements.
@@ -2684,7 +2684,7 @@ declare namespace _ {
     pullAt<T>(...indexes: (number | number[])[]): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.remove
+  // _.remove
   interface LoDashStatic {
     /**
      * Removes all elements from array that predicate returns truthy for and returns an array of the removed
@@ -2830,7 +2830,7 @@ declare namespace _ {
     ): LoDashExplicitArrayWrapper<TResult>;
   }
 
-  //_.tail
+  // _.tail
   interface LoDashStatic {
     /**
      * Gets all but the first element of array.
@@ -2871,7 +2871,7 @@ declare namespace _ {
     tail<T>(): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.slice
+  // _.slice
   interface LoDashStatic {
     /**
      * Creates a slice of array from start up to, but not including, end.
@@ -2908,7 +2908,7 @@ declare namespace _ {
     ): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.sortedIndex
+  // _.sortedIndex
   interface LoDashStatic {
     /**
      * Uses a binary search to determine the lowest index at which `value` should
@@ -3071,7 +3071,7 @@ declare namespace _ {
 
   }
 
-  //_.sortedIndexBy
+  // _.sortedIndexBy
   interface LoDashStatic {
     /**
      * This method is like `_.sortedIndex` except that it accepts `iteratee`
@@ -3295,7 +3295,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<number>;
   }
 
-  //_.sortedLastIndex
+  // _.sortedLastIndex
   interface LoDashStatic {
     /**
      * This method is like `_.sortedIndex` except that it returns the highest
@@ -3454,7 +3454,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<number>;
   }
 
-  //_.sortedLastIndexBy
+  // _.sortedLastIndexBy
   interface LoDashStatic {
     /**
      * This method is like `_.sortedLastIndex` except that it accepts `iteratee`
@@ -3673,7 +3673,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<number>;
   }
 
-  //_.sortedLastIndexOf DUMMY
+  // _.sortedLastIndexOf DUMMY
   interface LoDashStatic {
     /**
      * This method is like `_.lastIndexOf` except that it performs a binary
@@ -3696,7 +3696,7 @@ declare namespace _ {
     ): any[];
   }
 
-  //_.tail
+  // _.tail
   interface LoDashStatic {
     /**
      * @see _.rest
@@ -3732,7 +3732,7 @@ declare namespace _ {
     tail<T>(): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.take
+  // _.take
   interface LoDashStatic {
     /**
      * Creates a slice of array with n elements taken from the beginning.
@@ -3775,7 +3775,7 @@ declare namespace _ {
     take<TResult>(n?: number): LoDashExplicitArrayWrapper<TResult>;
   }
 
-  //_.takeRight
+  // _.takeRight
   interface LoDashStatic {
     /**
      * Creates a slice of array with n elements taken from the end.
@@ -3818,7 +3818,7 @@ declare namespace _ {
     takeRight<TResult>(n?: number): LoDashExplicitArrayWrapper<TResult>;
   }
 
-  //_.takeRightWhile
+  // _.takeRightWhile
   interface LoDashStatic {
     /**
      * Creates a slice of array with elements taken from the end. Elements are taken until predicate returns
@@ -3962,7 +3962,7 @@ declare namespace _ {
     ): LoDashExplicitArrayWrapper<TValue>;
   }
 
-  //_.takeWhile
+  // _.takeWhile
   interface LoDashStatic {
     /**
      * Creates a slice of array with elements taken from the beginning. Elements are taken until predicate returns
@@ -4106,7 +4106,7 @@ declare namespace _ {
     ): LoDashExplicitArrayWrapper<TValue>;
   }
 
-  //_.union
+  // _.union
   interface LoDashStatic {
     /**
      * Creates an array of unique values, in order, from all of the provided arrays using SameValueZero for
@@ -4156,7 +4156,7 @@ declare namespace _ {
     union<T>(...arrays: List<T>[]): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.unionBy
+  // _.unionBy
   interface LoDashStatic {
     /**
      * This method is like `_.union` except that it accepts `iteratee` which is
@@ -4669,7 +4669,7 @@ declare namespace _ {
     ): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.uniq
+  // _.uniq
   interface LoDashStatic {
     /**
      * Creates a duplicate-free version of an array, using
@@ -4758,7 +4758,7 @@ declare namespace _ {
     uniq<T, TSort>(): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.uniqBy
+  // _.uniqBy
   interface LoDashStatic {
     /**
      * This method is like `_.uniq` except that it accepts `iteratee` which is
@@ -4956,7 +4956,7 @@ declare namespace _ {
     ): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.sortedUniq
+  // _.sortedUniq
   interface LoDashStatic {
     /**
      * This method is like `_.uniq` except that it's designed and optimized
@@ -5043,7 +5043,7 @@ declare namespace _ {
     sortedUniq<T, TSort>(): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.sortedUniqBy
+  // _.sortedUniqBy
   interface LoDashStatic {
     /**
      * This method is like `_.uniqBy` except that it's designed and optimized
@@ -5236,7 +5236,7 @@ declare namespace _ {
     ): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.unionWith DUMMY
+  // _.unionWith DUMMY
   interface LoDashStatic {
     /**
      * This method is like `_.union` except that it accepts `comparator` which
@@ -5263,7 +5263,7 @@ declare namespace _ {
     ): any[];
   }
 
-  //_.uniqWith DUMMY
+  // _.uniqWith DUMMY
   interface LoDashStatic {
     /**
      * This method is like `_.uniq` except that it accepts `comparator` which
@@ -5289,7 +5289,7 @@ declare namespace _ {
     ): any[];
   }
 
-  //_.unzip
+  // _.unzip
   interface LoDashStatic {
     /**
      * This method is like _.zip except that it accepts an array of grouped elements and creates an array
@@ -5329,7 +5329,7 @@ declare namespace _ {
     unzip<T>(): LoDashExplicitArrayWrapper<T[]>;
   }
 
-  //_.unzipWith
+  // _.unzipWith
   interface LoDashStatic {
     /**
      * This method is like _.unzip except that it accepts an iteratee to specify how regrouped values should be
@@ -5368,7 +5368,7 @@ declare namespace _ {
     ): LoDashImplicitArrayWrapper<TResult>;
   }
 
-  //_.without
+  // _.without
   interface LoDashStatic {
     /**
      * Creates an array excluding all provided values using SameValueZero for equality comparisons.
@@ -5411,7 +5411,7 @@ declare namespace _ {
     without<T>(...values: T[]): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.xor
+  // _.xor
   interface LoDashStatic {
     /**
      * Creates an array of unique values that is the symmetric difference of the provided arrays.
@@ -5450,7 +5450,7 @@ declare namespace _ {
     xor<T>(...arrays: List<T>[]): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.xorBy DUMMY
+  // _.xorBy DUMMY
   interface LoDashStatic {
     /**
      * This method is like `_.xor` except that it accepts `iteratee` which is
@@ -5478,7 +5478,7 @@ declare namespace _ {
     ): any[];
   }
 
-  //_.xorWith DUMMY
+  // _.xorWith DUMMY
   interface LoDashStatic {
     /**
      * This method is like `_.xor` except that it accepts `comparator` which is
@@ -5505,7 +5505,7 @@ declare namespace _ {
     ): any[];
   }
 
-  //_.zip
+  // _.zip
   interface LoDashStatic {
     /**
      * Creates an array of grouped elements, the first of which contains the first elements of the given arrays,
@@ -5545,7 +5545,7 @@ declare namespace _ {
     zip<T>(...arrays: List<T>[]): _.LoDashExplicitArrayWrapper<T[]>;
   }
 
-  //_.zipObject
+  // _.zipObject
   interface LoDashStatic {
     /**
      * The inverse of _.pairs; this method returns an object composed from arrays of property names and values.
@@ -5670,7 +5670,7 @@ declare namespace _ {
     ): _.LoDashExplicitObjectWrapper<_.Dictionary<any>>;
   }
 
-  //_.zipWith
+  // _.zipWith
   interface LoDashStatic {
     /**
      * This method is like _.zip except that it accepts an iteratee to specify how grouped values should be
@@ -5693,9 +5693,9 @@ declare namespace _ {
 
   /*********
    * Chain *
-   *********/
+   ********/
 
-  //_.chain
+  // _.chain
   interface LoDashStatic {
     /**
      * Creates a lodash object that wraps value with explicit method chaining enabled.
@@ -5739,7 +5739,7 @@ declare namespace _ {
     chain(): TWrapper;
   }
 
-  //_.tap
+  // _.tap
   interface LoDashStatic {
     /**
      * This method invokes interceptor and returns value. The interceptor is bound to thisArg and invoked with one
@@ -5750,7 +5750,7 @@ declare namespace _ {
      * @param interceptor The function to invoke.
      * @parem thisArg The this binding of interceptor.
      * @return Returns value.
-     **/
+     */
     tap<T>(
       value: T,
       interceptor: (value: T) => void,
@@ -5778,7 +5778,7 @@ declare namespace _ {
     ): TWrapper;
   }
 
-  //_.thru
+  // _.thru
   interface LoDashStatic {
     /**
      * This method is like _.tap except that it returns the result of interceptor.
@@ -5874,7 +5874,7 @@ declare namespace _ {
     ): LoDashExplicitArrayWrapper<TResult>;
   }
 
-  //_.prototype.commit
+  // _.prototype.commit
   interface LoDashImplicitWrapperBase<T, TWrapper> {
     /**
      * Executes the chained sequence and returns the wrapped result.
@@ -5891,7 +5891,7 @@ declare namespace _ {
     commit(): TWrapper;
   }
 
-  //_.prototype.concat
+  // _.prototype.concat
   interface LoDashImplicitWrapperBase<T, TWrapper> {
     /**
      * Creates a new array joining a wrapped array with any additional arrays and/or values.
@@ -5919,7 +5919,7 @@ declare namespace _ {
     concat(...items: Array<T | Array<T>>): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.prototype.plant
+  // _.prototype.plant
   interface LoDashImplicitWrapperBase<T, TWrapper> {
     /**
      * Creates a clone of the chained sequence planting value as the wrapped value.
@@ -5996,7 +5996,7 @@ declare namespace _ {
     plant(value: any): LoDashExplicitWrapper<any>;
   }
 
-  //_.prototype.reverse
+  // _.prototype.reverse
   interface LoDashImplicitArrayWrapper<T> {
     /**
      * Reverses the wrapped array so the first element becomes the last, the second element becomes the second to
@@ -6016,7 +6016,7 @@ declare namespace _ {
     reverse(): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.prototype.toJSON
+  // _.prototype.toJSON
   interface LoDashWrapperBase<T, TWrapper> {
     /**
      * @see _.value
@@ -6024,7 +6024,7 @@ declare namespace _ {
     toJSON(): T;
   }
 
-  //_.prototype.toString
+  // _.prototype.toString
   interface LoDashWrapperBase<T, TWrapper> {
     /**
      * Produces the result of coercing the unwrapped value to a string.
@@ -6034,7 +6034,7 @@ declare namespace _ {
     toString(): string;
   }
 
-  //_.prototype.value
+  // _.prototype.value
   interface LoDashWrapperBase<T, TWrapper> {
     /**
      * Executes the chained sequence to extract the unwrapped value.
@@ -6046,7 +6046,7 @@ declare namespace _ {
     value(): T;
   }
 
-  //_.valueOf
+  // _.valueOf
   interface LoDashWrapperBase<T, TWrapper> {
     /**
      * @see _.value
@@ -6056,9 +6056,9 @@ declare namespace _ {
 
   /**************
    * Collection *
-   **************/
+   *************/
 
-  //_.at
+  // _.at
   interface LoDashStatic {
     /**
      * Creates an array of elements corresponding to the given keys, or indexes, of collection. Keys may be
@@ -6102,7 +6102,7 @@ declare namespace _ {
     at<T>(...props: (number | string | (number | string)[])[]): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.countBy
+  // _.countBy
   interface LoDashStatic {
     /**
      * Creates an object composed of keys generated from the results of running each element of collection through
@@ -6294,7 +6294,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<Dictionary<number>>;
   }
 
-  //_.each
+  // _.each
   interface LoDashStatic {
     /**
      * @see _.forEach
@@ -6402,7 +6402,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<T>;
   }
 
-  //_.eachRight
+  // _.eachRight
   interface LoDashStatic {
     /**
      * @see _.forEachRight
@@ -6510,7 +6510,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<T>;
   }
 
-  //_.every
+  // _.every
   interface LoDashStatic {
     /**
      * Checks if predicate returns truthy for all elements of collection. Iteration is stopped once predicate
@@ -6650,7 +6650,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.filter
+  // _.filter
   interface LoDashStatic {
     /**
      * Iterates over elements of collection, returning an array of all elements predicate returns truthy for. The
@@ -6824,7 +6824,7 @@ declare namespace _ {
     filter<W, T>(predicate: W): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.find
+  // _.find
   interface LoDashStatic {
     /**
      * Iterates over elements of collection, returning the first element predicate returns truthy for.
@@ -6927,81 +6927,81 @@ declare namespace _ {
     ): TResult;
   }
 
-  //_.findLast
+  // _.findLast
   interface LoDashStatic {
     /**
-    * This method is like _.find except that it iterates over elements of a collection from
-    * right to left.
-    * @param collection Searches for a value in this list.
-    * @param callback The function called per iteration.
-    * @param thisArg The this binding of callback.
-    * @return The found element, else undefined.
-    **/
+     * This method is like _.find except that it iterates over elements of a collection from
+     * right to left.
+     * @param collection Searches for a value in this list.
+     * @param callback The function called per iteration.
+     * @param thisArg The this binding of callback.
+     * @return The found element, else undefined.
+     */
     findLast<T>(
       collection: Array<T>,
       callback: ListIterator<T, boolean>,
       thisArg?: any): T;
 
     /**
-    * @see _.find
-    **/
+     * @see _.find
+     */
     findLast<T>(
       collection: List<T>,
       callback: ListIterator<T, boolean>,
       thisArg?: any): T;
 
     /**
-    * @see _.find
-    **/
+     * @see _.find
+     */
     findLast<T>(
       collection: Dictionary<T>,
       callback: DictionaryIterator<T, boolean>,
       thisArg?: any): T;
 
     /**
-    * @see _.find
-    * @param _.pluck style callback
-    **/
+     * @see _.find
+     * @param _.pluck style callback
+     */
     findLast<W, T>(
       collection: Array<T>,
       whereValue: W): T;
 
     /**
-    * @see _.find
-    * @param _.pluck style callback
-    **/
+     * @see _.find
+     * @param _.pluck style callback
+     */
     findLast<W, T>(
       collection: List<T>,
       whereValue: W): T;
 
     /**
-    * @see _.find
-    * @param _.pluck style callback
-    **/
+     * @see _.find
+     * @param _.pluck style callback
+     */
     findLast<W, T>(
       collection: Dictionary<T>,
       whereValue: W): T;
 
     /**
-    * @see _.find
-    * @param _.where style callback
-    **/
+     * @see _.find
+     * @param _.where style callback
+     */
     findLast<T>(
       collection: Array<T>,
       pluckValue: string): T;
 
     /**
-    * @see _.find
-    * @param _.where style callback
-    **/
+     * @see _.find
+     * @param _.where style callback
+     */
     findLast<T>(
       collection: List<T>,
       pluckValue: string): T;
 
     /**
-    * @see _.find
-    * @param _.where style callback
-    **/
+     * @see _.find
+     * @param _.where style callback
+     */
     findLast<T>(
       collection: Dictionary<T>,
       pluckValue: string): T;
@@ -7009,27 +7009,27 @@ declare namespace _ {
 
   interface LoDashImplicitArrayWrapper<T> {
     /**
-    * @see _.findLast
-    */
+     * @see _.findLast
+     */
     findLast(
       callback: ListIterator<T, boolean>,
       thisArg?: any): T;
     /**
-    * @see _.findLast
-    * @param _.where style callback
-    */
+     * @see _.findLast
+     * @param _.where style callback
+     */
     findLast<W>(
       whereValue: W): T;
 
     /**
-    * @see _.findLast
-    * @param _.where style callback
-    */
+     * @see _.findLast
+     * @param _.where style callback
+     */
     findLast(
       pluckValue: string): T;
   }
 
-  //_.forEach
+  // _.forEach
   interface LoDashStatic {
     /**
      * Iterates over elements of collection invoking iteratee for each element. The iteratee is bound to thisArg
@@ -7148,7 +7148,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<T>;
   }
 
-  //_.forEachRight
+  // _.forEachRight
   interface LoDashStatic {
     /**
      * This method is like _.forEach except that it iterates over elements of collection from right to left.
@@ -7262,7 +7262,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<T>;
   }
 
-  //_.groupBy
+  // _.groupBy
   interface LoDashStatic {
     /**
      * Creates an object composed of keys generated from the results of running each element of collection through
@@ -7518,7 +7518,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<Dictionary<T[]>>;
   }
 
-  //_.includes
+  // _.includes
   interface LoDashStatic {
     /**
      * Checks if target is in collection using SameValueZero for equality comparisons. If fromIndex is negative,
@@ -7605,7 +7605,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.keyBy
+  // _.keyBy
   interface LoDashStatic {
     /**
      * Creates an object composed of keys generated from the results of running each element of collection through
@@ -7811,73 +7811,73 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<Dictionary<T>>;
   }
 
-  //_.invokeMap
+  // _.invokeMap
   interface LoDashStatic {
     /**
-    * Invokes the method named by methodName on each element in the collection returning
-    * an array of the results of each invoked method. Additional arguments will be provided
-    * to each invoked method. If methodName is a function it will be invoked for, and this
-    * bound to, each element in the collection.
-    * @param collection The collection to iterate over.
-    * @param methodName The name of the method to invoke.
-    * @param args Arguments to invoke the method with.
-    **/
+     * Invokes the method named by methodName on each element in the collection returning
+     * an array of the results of each invoked method. Additional arguments will be provided
+     * to each invoked method. If methodName is a function it will be invoked for, and this
+     * bound to, each element in the collection.
+     * @param collection The collection to iterate over.
+     * @param methodName The name of the method to invoke.
+     * @param args Arguments to invoke the method with.
+     */
     invokeMap<TValue extends {}, TResult>(
       collection: TValue[],
       methodName: string,
       ...args: any[]): TResult[];
 
     /**
-    * @see _.invokeMap
-    **/
+     * @see _.invokeMap
+     */
     invokeMap<TValue extends {}, TResult>(
       collection: Dictionary<TValue>,
       methodName: string,
       ...args: any[]): TResult[];
 
     /**
-    * @see _.invokeMap
-    **/
+     * @see _.invokeMap
+     */
     invokeMap<TResult>(
       collection: {}[],
       methodName: string,
       ...args: any[]): TResult[];
 
     /**
-    * @see _.invokeMap
-    **/
+     * @see _.invokeMap
+     */
     invokeMap<TResult>(
       collection: Dictionary<{}>,
       methodName: string,
       ...args: any[]): TResult[];
 
     /**
-    * @see _.invokeMap
-    **/
+     * @see _.invokeMap
+     */
     invokeMap<TValue extends {}, TResult>(
       collection: TValue[],
       method: (...args: any[]) => TResult,
       ...args: any[]): TResult[];
 
     /**
-    * @see _.invokeMap
-    **/
+     * @see _.invokeMap
+     */
     invokeMap<TValue extends {}, TResult>(
       collection: Dictionary<TValue>,
       method: (...args: any[]) => TResult,
       ...args: any[]): TResult[];
 
     /**
-    * @see _.invokeMap
-    **/
+     * @see _.invokeMap
+     */
     invokeMap<TResult>(
       collection: {}[],
       method: (...args: any[]) => TResult,
       ...args: any[]): TResult[];
 
     /**
-    * @see _.invokeMap
-    **/
+     * @see _.invokeMap
+     */
     invokeMap<TResult>(
       collection: Dictionary<{}>,
       method: (...args: any[]) => TResult,
@@ -7886,15 +7886,15 @@ declare namespace _ {
 
   interface LoDashImplicitArrayWrapper<T> {
     /**
-    * @see _.invokeMap
-    **/
+     * @see _.invokeMap
+     */
     invokeMap<TResult>(
       methodName: string,
       ...args: any[]): LoDashImplicitArrayWrapper<TResult>;
 
     /**
-    * @see _.invokeMap
-    **/
+     * @see _.invokeMap
+     */
     invokeMap<TResult>(
       method: (...args: any[]) => TResult,
       ...args: any[]): LoDashImplicitArrayWrapper<TResult>;
@@ -7902,15 +7902,15 @@ declare namespace _ {
 
   interface LoDashImplicitObjectWrapper<T> {
     /**
-    * @see _.invokeMap
-    **/
+     * @see _.invokeMap
+     */
     invokeMap<TResult>(
       methodName: string,
       ...args: any[]): LoDashImplicitArrayWrapper<TResult>;
 
     /**
-    * @see _.invokeMap
-    **/
+     * @see _.invokeMap
+     */
     invokeMap<TResult>(
       method: (...args: any[]) => TResult,
       ...args: any[]): LoDashImplicitArrayWrapper<TResult>;
@@ -7918,15 +7918,15 @@ declare namespace _ {
 
   interface LoDashExplicitArrayWrapper<T> {
     /**
-    * @see _.invokeMap
-    **/
+     * @see _.invokeMap
+     */
     invokeMap<TResult>(
       methodName: string,
       ...args: any[]): LoDashExplicitArrayWrapper<TResult>;
 
     /**
-    * @see _.invokeMap
-    **/
+     * @see _.invokeMap
+     */
     invokeMap<TResult>(
       method: (...args: any[]) => TResult,
       ...args: any[]): LoDashExplicitArrayWrapper<TResult>;
@@ -7934,21 +7934,21 @@ declare namespace _ {
 
   interface LoDashExplicitObjectWrapper<T> {
     /**
-    * @see _.invokeMap
-    **/
+     * @see _.invokeMap
+     */
     invokeMap<TResult>(
       methodName: string,
       ...args: any[]): LoDashExplicitArrayWrapper<TResult>;
 
     /**
-    * @see _.invokeMap
-    **/
+     * @see _.invokeMap
+     */
     invokeMap<TResult>(
       method: (...args: any[]) => TResult,
       ...args: any[]): LoDashExplicitArrayWrapper<TResult>;
   }
 
-  //_.map
+  // _.map
   interface LoDashStatic {
     /**
      * Creates an array of values by running each element in collection through iteratee. The iteratee is bound to
@@ -8110,27 +8110,27 @@ declare namespace _ {
     ): LoDashExplicitArrayWrapper<boolean>;
   }
 
-  //_.partition
+  // _.partition
   interface LoDashStatic {
     /**
-    * Creates an array of elements split into two groups, the first of which contains elements predicate returns truthy for,
-    * while the second of which contains elements predicate returns falsey for.
-    * The predicate is bound to thisArg and invoked with three arguments: (value, index|key, collection).
-    *
-    * If a property name is provided for predicate the created _.property style callback
-    * returns the property value of the given element.
-    *
-    * If a value is also provided for thisArg the created _.matchesProperty style callback
-    * returns true for elements that have a matching property value, else false.
-    *
-    * If an object is provided for predicate the created _.matches style callback returns
-    * true for elements that have the properties of the given object, else false.
-    *
-    * @param collection The collection to iterate over.
-    * @param callback The function called per iteration.
-    * @param thisArg The this binding of predicate.
-    * @return Returns the array of grouped elements.
-    **/
+     * Creates an array of elements split into two groups, the first of which contains elements predicate returns truthy for,
+     * while the second of which contains elements predicate returns falsey for.
+     * The predicate is bound to thisArg and invoked with three arguments: (value, index|key, collection).
+     *
+     * If a property name is provided for predicate the created _.property style callback
+     * returns the property value of the given element.
+     *
+     * If a value is also provided for thisArg the created _.matchesProperty style callback
+     * returns true for elements that have a matching property value, else false.
+     *
+     * If an object is provided for predicate the created _.matches style callback returns
+     * true for elements that have the properties of the given object, else false.
+     *
+     * @param collection The collection to iterate over.
+     * @param callback The function called per iteration.
+     * @param thisArg The this binding of predicate.
+     * @return Returns the array of grouped elements.
+     */
     partition<T>(
       collection: List<T>,
       callback: ListIterator<T, boolean>,
@@ -8138,7 +8138,7 @@ declare namespace _ {
 
     /**
      * @see _.partition
-     **/
+     */
     partition<T>(
       collection: Dictionary<T>,
       callback: DictionaryIterator<T, boolean>,
@@ -8146,21 +8146,21 @@ declare namespace _ {
 
     /**
      * @see _.partition
-     **/
+     */
     partition<W, T>(
       collection: List<T>,
       whereValue: W): T[][];
 
     /**
      * @see _.partition
-     **/
+     */
     partition<W, T>(
       collection: Dictionary<T>,
       whereValue: W): T[][];
 
     /**
      * @see _.partition
-     **/
+     */
     partition<T>(
       collection: List<T>,
       path: string,
@@ -8168,7 +8168,7 @@ declare namespace _ {
 
     /**
      * @see _.partition
-     **/
+     */
     partition<T>(
       collection: Dictionary<T>,
       path: string,
@@ -8176,14 +8176,14 @@ declare namespace _ {
 
     /**
      * @see _.partition
-     **/
+     */
     partition<T>(
       collection: List<T>,
       pluckValue: string): T[][];
 
     /**
      * @see _.partition
-     **/
+     */
     partition<T>(
       collection: Dictionary<T>,
       pluckValue: string): T[][];
@@ -8258,20 +8258,20 @@ declare namespace _ {
       pluckValue: string): LoDashImplicitArrayWrapper<TResult[]>;
   }
 
-  //_.reduce
+  // _.reduce
   interface LoDashStatic {
     /**
-    * Reduces a collection to a value which is the accumulated result of running each
-    * element in the collection through the callback, where each successive callback execution
-    * consumes the return value of the previous execution. If accumulator is not provided the
-    * first element of the collection will be used as the initial accumulator value. The callback
-    * is bound to thisArg and invoked with four arguments; (accumulator, value, index|key, collection).
-    * @param collection The collection to iterate over.
-    * @param callback The function called per iteration.
-    * @param accumulator Initial value of the accumulator.
-    * @param thisArg The this binding of callback.
-    * @return Returns the accumulated value.
-    **/
+     * Reduces a collection to a value which is the accumulated result of running each
+     * element in the collection through the callback, where each successive callback execution
+     * consumes the return value of the previous execution. If accumulator is not provided the
+     * first element of the collection will be used as the initial accumulator value. The callback
+     * is bound to thisArg and invoked with four arguments; (accumulator, value, index|key, collection).
+     * @param collection The collection to iterate over.
+     * @param callback The function called per iteration.
+     * @param accumulator Initial value of the accumulator.
+     * @param thisArg The this binding of callback.
+     * @return Returns the accumulated value.
+     */
     reduce<T, TResult>(
       collection: Array<T>,
       callback: MemoIterator<T, TResult>,
@@ -8279,8 +8279,8 @@ declare namespace _ {
       thisArg?: any): TResult;
 
     /**
-    * @see _.reduce
-    **/
+     * @see _.reduce
+     */
     reduce<T, TResult>(
       collection: List<T>,
       callback: MemoIterator<T, TResult>,
@@ -8288,8 +8288,8 @@ declare namespace _ {
       thisArg?: any): TResult;
 
     /**
-    * @see _.reduce
-    **/
+     * @see _.reduce
+     */
     reduce<T, TResult>(
       collection: Dictionary<T>,
       callback: MemoIterator<T, TResult>,
@@ -8297,8 +8297,8 @@ declare namespace _ {
       thisArg?: any): TResult;
 
     /**
-    * @see _.reduce
-    **/
+     * @see _.reduce
+     */
     reduce<T, TResult>(
       collection: NumericDictionary<T>,
       callback: MemoIterator<T, TResult>,
@@ -8306,32 +8306,32 @@ declare namespace _ {
       thisArg?: any): TResult;
 
     /**
-    * @see _.reduce
-    **/
+     * @see _.reduce
+     */
     reduce<T, TResult>(
       collection: Array<T>,
       callback: MemoIterator<T, TResult>,
       thisArg?: any): TResult;
 
     /**
-    * @see _.reduce
-    **/
+     * @see _.reduce
+     */
     reduce<T, TResult>(
       collection: List<T>,
       callback: MemoIterator<T, TResult>,
       thisArg?: any): TResult;
 
     /**
-    * @see _.reduce
-    **/
+     * @see _.reduce
+     */
     reduce<T, TResult>(
       collection: Dictionary<T>,
       callback: MemoIterator<T, TResult>,
       thisArg?: any): TResult;
 
     /**
-    * @see _.reduce
-    **/
+     * @see _.reduce
+     */
     reduce<T, TResult>(
       collection: NumericDictionary<T>,
       callback: MemoIterator<T, TResult>,
@@ -8341,16 +8341,16 @@ declare namespace _ {
 
   interface LoDashImplicitArrayWrapper<T> {
     /**
-   * @see _.reduce
-   **/
+     * @see _.reduce
+     */
     reduce<TResult>(
       callback: MemoIterator<T, TResult>,
       accumulator: TResult,
       thisArg?: any): TResult;
 
     /**
-    * @see _.reduce
-    **/
+     * @see _.reduce
+     */
     reduce<TResult>(
       callback: MemoIterator<T, TResult>,
       thisArg?: any): TResult;
@@ -8358,32 +8358,32 @@ declare namespace _ {
 
   interface LoDashImplicitObjectWrapper<T> {
     /**
-   * @see _.reduce
-   **/
+     * @see _.reduce
+     */
     reduce<TValue, TResult>(
       callback: MemoIterator<TValue, TResult>,
       accumulator: TResult,
       thisArg?: any): TResult;
 
     /**
-    * @see _.reduce
-    **/
+     * @see _.reduce
+     */
     reduce<TValue, TResult>(
       callback: MemoIterator<TValue, TResult>,
       thisArg?: any): TResult;
   }
 
-  //_.reduceRight
+  // _.reduceRight
   interface LoDashStatic {
     /**
-    * This method is like _.reduce except that it iterates over elements of a collection from
-    * right to left.
-    * @param collection The collection to iterate over.
-    * @param callback The function called per iteration.
-    * @param accumulator Initial value of the accumulator.
-    * @param thisArg The this binding of callback.
-    * @return The accumulated value.
-    **/
+     * This method is like _.reduce except that it iterates over elements of a collection from
+     * right to left.
+     * @param collection The collection to iterate over.
+     * @param callback The function called per iteration.
+     * @param accumulator Initial value of the accumulator.
+     * @param thisArg The this binding of callback.
+     * @return The accumulated value.
+     */
     reduceRight<T, TResult>(
       collection: Array<T>,
       callback: MemoIterator<T, TResult>,
@@ -8391,8 +8391,8 @@ declare namespace _ {
       thisArg?: any): TResult;
 
     /**
-    * @see _.reduceRight
-    **/
+     * @see _.reduceRight
+     */
     reduceRight<T, TResult>(
       collection: List<T>,
       callback: MemoIterator<T, TResult>,
@@ -8400,8 +8400,8 @@ declare namespace _ {
       thisArg?: any): TResult;
 
     /**
-    * @see _.reduceRight
-    **/
+     * @see _.reduceRight
+     */
     reduceRight<T, TResult>(
       collection: Dictionary<T>,
       callback: MemoIterator<T, TResult>,
@@ -8409,31 +8409,31 @@ declare namespace _ {
       thisArg?: any): TResult;
 
     /**
-    * @see _.reduceRight
-    **/
+     * @see _.reduceRight
+     */
     reduceRight<T, TResult>(
       collection: Array<T>,
       callback: MemoIterator<T, TResult>,
       thisArg?: any): TResult;
 
     /**
-    * @see _.reduceRight
-    **/
+     * @see _.reduceRight
+     */
     reduceRight<T, TResult>(
       collection: List<T>,
       callback: MemoIterator<T, TResult>,
       thisArg?: any): TResult;
 
     /**
-    * @see _.reduceRight
-    **/
+     * @see _.reduceRight
+     */
     reduceRight<T, TResult>(
       collection: Dictionary<T>,
       callback: MemoIterator<T, TResult>,
       thisArg?: any): TResult;
   }
 
-  //_.reject
+  // _.reject
   interface LoDashStatic {
     /**
      * The opposite of _.filter; this method returns the elements of collection that predicate does not return
@@ -8598,7 +8598,7 @@ declare namespace _ {
     reject<W, T>(predicate: W): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.sample
+  // _.sample
   interface LoDashStatic {
     /**
      * Gets a random element from `collection`.
@@ -8616,24 +8616,24 @@ declare namespace _ {
     sample<T>(collection: Array<T>): T;
 
     /**
-    * @see _.sample
-    **/
+     * @see _.sample
+     */
     sample<T>(collection: List<T>): T;
 
     /**
-    * @see _.sample
-    **/
+     * @see _.sample
+     */
     sample<T>(collection: Dictionary<T>): T;
   }
 
   interface LoDashImplicitArrayWrapper<T> {
     /**
      * @see _.sample
-     **/
+     */
     sample(): LoDashImplicitWrapper<T>;
   }
 
-  //_.sampleSize
+  // _.sampleSize
   interface LoDashStatic {
     /**
      * Gets `n` random elements from `collection`.
@@ -8652,29 +8652,29 @@ declare namespace _ {
     sampleSize<T>(collection: Array<T>, n: number): T[];
 
     /**
-    * @see _.sampleSize
-    **/
+     * @see _.sampleSize
+     */
     sampleSize<T>(collection: List<T>, n: number): T[];
 
     /**
-    * @see _.sampleSize
-    **/
+     * @see _.sampleSize
+     */
     sampleSize<T>(collection: Dictionary<T>, n: number): T[];
   }
 
   interface LoDashImplicitArrayWrapper<T> {
     /**
      * @see _.sampleSize
-     **/
+     */
     sampleSize(n: number): LoDashImplicitArrayWrapper<T>;
 
     /**
      * @see _.sampleSize
-     **/
+     */
     sampleSize(): LoDashImplicitWrapper<T>;
   }
 
-  //_.shuffle
+  // _.shuffle
   interface LoDashStatic {
     /**
      * Creates an array of shuffled values, using a version of the Fisher-Yates shuffle.
@@ -8732,7 +8732,7 @@ declare namespace _ {
     shuffle<T>(): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.size
+  // _.size
   interface LoDashStatic {
     /**
      * Gets the size of collection by returning its length for array-like values or the number of own enumerable
@@ -8791,7 +8791,7 @@ declare namespace _ {
     size(): LoDashExplicitWrapper<number>;
   }
 
-  //_.some
+  // _.some
   interface LoDashStatic {
     /**
      * Checks if predicate returns truthy for any element of collection. Iteration is stopped once predicate
@@ -8931,7 +8931,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.sortBy
+  // _.sortBy
   interface LoDashStatic {
     /**
      * Creates an array of elements, sorted in ascending order by the results of
@@ -9046,8 +9046,8 @@ declare namespace _ {
     sortBy(...iteratees: (ListIterator<T, boolean> | Object | string)[]): LoDashImplicitArrayWrapper<T>;
 
     /**
-    * @see _.sortBy
-    **/
+     * @see _.sortBy
+     */
     sortBy(iteratees: (ListIterator<T, any> | string | Object)[]): LoDashImplicitArrayWrapper<T>;
   }
 
@@ -9123,7 +9123,7 @@ declare namespace _ {
     sortBy<T>(): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.orderBy
+  // _.orderBy
   interface LoDashStatic {
     /**
      * This method is like `_.sortBy` except that it allows specifying the sort
@@ -9346,9 +9346,9 @@ declare namespace _ {
 
   /********
    * Date *
-   ********/
+   *******/
 
-  //_.now
+  // _.now
   interface LoDashStatic {
     /**
      * Gets the number of milliseconds that have elapsed since the Unix epoch (1 January 1970 00:00:00 UTC).
@@ -9374,9 +9374,9 @@ declare namespace _ {
 
   /*************
    * Functions *
-   *************/
+   ************/
 
-  //_.after
+  // _.after
   interface LoDashStatic {
     /**
      * The opposite of _.before; this method creates a function that invokes func once it’s called n or more times.
@@ -9393,19 +9393,19 @@ declare namespace _ {
 
   interface LoDashImplicitWrapper<T> {
     /**
-    * @see _.after
-    **/
+     * @see _.after
+     */
     after<TFunc extends Function>(func: TFunc): LoDashImplicitObjectWrapper<TFunc>;
   }
 
   interface LoDashExplicitWrapper<T> {
     /**
      * @see _.after
-     **/
+     */
     after<TFunc extends Function>(func: TFunc): LoDashExplicitObjectWrapper<TFunc>;
   }
 
-  //_.ary
+  // _.ary
   interface LoDashStatic {
     /**
      * Creates a function that accepts up to n arguments ignoring any additional arguments.
@@ -9439,7 +9439,7 @@ declare namespace _ {
     ary<TResult extends Function>(n?: number): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.before
+  // _.before
   interface LoDashStatic {
     /**
      * Creates a function that invokes func, with the this binding and arguments of the created function, while
@@ -9459,18 +9459,18 @@ declare namespace _ {
   interface LoDashImplicitWrapper<T> {
     /**
      * @see _.before
-     **/
+     */
     before<TFunc extends Function>(func: TFunc): LoDashImplicitObjectWrapper<TFunc>;
   }
 
   interface LoDashExplicitWrapper<T> {
     /**
      * @see _.before
-     **/
+     */
     before<TFunc extends Function>(func: TFunc): LoDashExplicitObjectWrapper<TFunc>;
   }
 
-  //_.bind
+  // _.bind
   interface FunctionBind {
     placeholder: any;
 
@@ -9525,7 +9525,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.bindAll
+  // _.bindAll
   interface LoDashStatic {
     /**
      * Binds methods of an object to the object itself, overwriting the existing method. Method names may be
@@ -9559,7 +9559,7 @@ declare namespace _ {
     bindAll(...methodNames: (string | string[])[]): LoDashExplicitObjectWrapper<T>;
   }
 
-  //_.bindKey
+  // _.bindKey
   interface FunctionBindKey {
     placeholder: any;
 
@@ -9615,26 +9615,26 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.createCallback
+  // _.createCallback
   interface LoDashStatic {
     /**
-    * Produces a callback bound to an optional thisArg. If func is a property name the created
-    * callback will return the property value for a given element. If func is an object the created
-    * callback will return true for elements that contain the equivalent object properties,
-    * otherwise it will return false.
-    * @param func The value to convert to a callback.
-    * @param thisArg The this binding of the created callback.
-    * @param argCount The number of arguments the callback accepts.
-    * @return A callback function.
-    **/
+     * Produces a callback bound to an optional thisArg. If func is a property name the created
+     * callback will return the property value for a given element. If func is an object the created
+     * callback will return true for elements that contain the equivalent object properties,
+     * otherwise it will return false.
+     * @param func The value to convert to a callback.
+     * @param thisArg The this binding of the created callback.
+     * @param argCount The number of arguments the callback accepts.
+     * @return A callback function.
+     */
     createCallback(
       func: string,
       thisArg?: any,
       argCount?: number): () => any;
 
     /**
-    * @see _.createCallback
-    **/
+     * @see _.createCallback
+     */
     createCallback(
       func: Dictionary<any>,
       thisArg?: any,
@@ -9643,8 +9643,8 @@ declare namespace _ {
 
   interface LoDashImplicitWrapper<T> {
     /**
-    * @see _.createCallback
-    **/
+     * @see _.createCallback
+     */
     createCallback(
       thisArg?: any,
       argCount?: number): LoDashImplicitObjectWrapper<() => any>;
@@ -9652,14 +9652,14 @@ declare namespace _ {
 
   interface LoDashImplicitObjectWrapper<T> {
     /**
-    * @see _.createCallback
-    **/
+     * @see _.createCallback
+     */
     createCallback(
       thisArg?: any,
       argCount?: number): LoDashImplicitObjectWrapper<() => any>;
   }
 
-  //_.curry
+  // _.curry
   interface LoDashStatic {
     /**
      * Creates a function that accepts one or more arguments of func that when called either invokes func returning
@@ -9756,12 +9756,12 @@ declare namespace _ {
 
   interface LoDashImplicitObjectWrapper<T> {
     /**
-    * @see _.curry
-    **/
+     * @see _.curry
+     */
     curry<TResult extends Function>(arity?: number): LoDashImplicitObjectWrapper<TResult>;
   }
 
-  //_.curryRight
+  // _.curryRight
   interface LoDashStatic {
     /**
      * This method is like _.curry except that arguments are applied to func in the manner of _.partialRight
@@ -9818,11 +9818,11 @@ declare namespace _ {
   interface LoDashImplicitObjectWrapper<T> {
     /**
      * @see _.curryRight
-     **/
+     */
     curryRight<TResult extends Function>(arity?: number): LoDashImplicitObjectWrapper<TResult>;
   }
 
-  //_.debounce
+  // _.debounce
   interface DebounceSettings {
     /**
      * Specify invoking on the leading edge of the timeout.
@@ -9888,7 +9888,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<T & Cancelable>;
   }
 
-  //_.defer
+  // _.defer
   interface LoDashStatic {
     /**
      * Defers invoking the func until the current call stack has cleared. Any additional arguments are provided to
@@ -9918,7 +9918,7 @@ declare namespace _ {
     defer(...args: any[]): LoDashExplicitWrapper<number>;
   }
 
-  //_.delay
+  // _.delay
   interface LoDashStatic {
     /**
      * Invokes func after wait milliseconds. Any additional arguments are provided to func when it’s invoked.
@@ -9990,7 +9990,7 @@ declare namespace _ {
     flip(): LoDashExplicitObjectWrapper<T>;
   }
 
-  //_.flow
+  // _.flow
   interface LoDashStatic {
     /**
      * Creates a function that returns the result of invoking the provided functions with the this binding of the
@@ -10016,7 +10016,7 @@ declare namespace _ {
     flow<TResult extends Function>(...funcs: Function[]): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.flowRight
+  // _.flowRight
   interface LoDashStatic {
     /**
      * This method is like _.flow except that it creates a function that invokes the provided functions from right
@@ -10043,7 +10043,7 @@ declare namespace _ {
   }
 
 
-  //_.memoize
+  // _.memoize
   interface MemoizedFunction extends Function {
     cache: MapCache;
   }
@@ -10061,7 +10061,7 @@ declare namespace _ {
     memoize: {
       <T extends Function>(func: T, resolver?: Function): T & MemoizedFunction;
       Cache: MapCache;
-    }
+    };
   }
 
   interface LoDashImplicitObjectWrapper<T> {
@@ -10071,7 +10071,7 @@ declare namespace _ {
     memoize(resolver?: Function): LoDashImplicitObjectWrapper<T & MemoizedFunction>;
   }
 
-  //_.overArgs (was _.modArgs)
+  // _.overArgs (was _.modArgs)
   interface LoDashStatic {
     /**
      * Creates a function that runs each argument through a corresponding transform function.
@@ -10119,7 +10119,7 @@ declare namespace _ {
     overArgs<TResult extends Function>(transforms: Function[]): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.negate
+  // _.negate
   interface LoDashStatic {
     /**
      * Creates a function that negates the result of the predicate func. The func predicate is invoked with
@@ -10160,7 +10160,7 @@ declare namespace _ {
     negate<TResult extends Function>(): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.once
+  // _.once
   interface LoDashStatic {
     /**
      * Creates a function that is restricted to invoking func once. Repeat calls to the function return the value
@@ -10186,16 +10186,16 @@ declare namespace _ {
     once(): LoDashExplicitObjectWrapper<T>;
   }
 
-  //_.partial
+  // _.partial
   interface LoDashStatic {
     /**
-    * Creates a function that, when called, invokes func with any additional partial arguments
-    * prepended to those provided to the new function. This method is similar to _.bind except
-    * it does not alter the this binding.
-    * @param func The function to partially apply arguments to.
-    * @param args Arguments to be partially applied.
-    * @return The new partially applied function.
-    **/
+     * Creates a function that, when called, invokes func with any additional partial arguments
+     * prepended to those provided to the new function. This method is similar to _.bind except
+     * it does not alter the this binding.
+     * @param func The function to partially apply arguments to.
+     * @param args Arguments to be partially applied.
+     * @return The new partially applied function.
+     */
     partial: Partial;
   }
 
@@ -10258,16 +10258,16 @@ declare namespace _ {
     (func: Function, ...args: any[]): Function;
   }
 
-  //_.partialRight
+  // _.partialRight
   interface LoDashStatic {
     /**
-    * This method is like _.partial except that partial arguments are appended to those provided
-    * to the new function.
-    * @param func The function to partially apply arguments to.
-    * @param args Arguments to be partially applied.
-    * @return The new partially applied function.
-    **/
-    partialRight: PartialRight
+     * This method is like _.partial except that partial arguments are appended to those provided
+     * to the new function.
+     * @param func The function to partially apply arguments to.
+     * @param args Arguments to be partially applied.
+     * @return The new partially applied function.
+     */
+    partialRight: PartialRight;
   }
 
   interface PartialRight {
@@ -10311,7 +10311,7 @@ declare namespace _ {
     (func: Function, ...args: any[]): Function;
   }
 
-  //_.rearg
+  // _.rearg
   interface LoDashStatic {
     /**
      * Creates a function that invokes func with arguments arranged according to the specified indexes where the
@@ -10341,7 +10341,7 @@ declare namespace _ {
     rearg<TResult extends Function>(...indexes: number[]): LoDashImplicitObjectWrapper<TResult>;
   }
 
-  //_.rest
+  // _.rest
   interface LoDashStatic {
     /**
      * Creates a function that invokes func with the this binding of the created function and arguments from start
@@ -10381,7 +10381,7 @@ declare namespace _ {
     rest<TResult extends Function>(start?: number): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.spread
+  // _.spread
   interface LoDashStatic {
     /**
      * Creates a function that invokes func with the this binding of the created function and an array of arguments
@@ -10414,7 +10414,7 @@ declare namespace _ {
     spread<T extends Function>(): LoDashExplicitObjectWrapper<T>;
   }
 
-  //_.throttle
+  // _.throttle
   interface ThrottleSettings {
     /**
      * If you'd like to disable the leading-edge call, pass this as false.
@@ -10471,7 +10471,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<T & Cancelable>;
   }
 
-  //_.unary
+  // _.unary
   interface LoDashStatic {
     /**
      * Creates a function that accepts up to one argument, ignoring any
@@ -10504,7 +10504,7 @@ declare namespace _ {
     unary(): LoDashExplicitObjectWrapper<T>;
   }
 
-  //_.wrap
+  // _.wrap
   interface LoDashStatic {
     /**
      * Creates a function that provides value to the wrapper function as its first argument. Any additional
@@ -10611,9 +10611,9 @@ declare namespace _ {
 
   /********
    * Lang *
-   ********/
+   *******/
 
-  //_.castArray
+  // _.castArray
   interface LoDashStatic {
     /**
      * Casts value as an array if it’s not one.
@@ -10666,7 +10666,7 @@ declare namespace _ {
     castArray(): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.clone
+  // _.clone
   interface LoDashStatic {
     /**
      * Creates a shallow clone of `value`.
@@ -10717,7 +10717,7 @@ declare namespace _ {
     clone(): T;
   }
 
-  //_.cloneDeep
+  // _.cloneDeep
   interface LoDashStatic {
     /**
      * This method is like `_.clone` except that it recursively clones `value`.
@@ -10759,7 +10759,7 @@ declare namespace _ {
     cloneDeep(): T;
   }
 
-  //_.cloneWith
+  // _.cloneWith
   interface LoDashStatic {
     /**
      * Creates a shallow clone of `value`.
@@ -10812,7 +10812,7 @@ declare namespace _ {
     cloneWith(customizer: (value: any) => any): T;
   }
 
-  //_.cloneDeepWith
+  // _.cloneDeepWith
   interface LoDashStatic {
     /**
      * Creates a deep clone of value. If customizer is provided it’s invoked to produce the cloned values. If
@@ -10852,7 +10852,7 @@ declare namespace _ {
     cloneDeepWith(customizer: (value: any) => any): T;
   }
 
-  //_.eq
+  // _.eq
   interface LoDashStatic {
     /**
      * Performs a [`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)
@@ -10908,7 +10908,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.gt
+  // _.gt
   interface LoDashStatic {
     /**
      * Checks if value is greater than other.
@@ -10937,7 +10937,7 @@ declare namespace _ {
     gt(other: any): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.gte
+  // _.gte
   interface LoDashStatic {
     /**
      * Checks if value is greater than or equal to other.
@@ -10966,7 +10966,7 @@ declare namespace _ {
     gte(other: any): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isArguments
+  // _.isArguments
   interface LoDashStatic {
     /**
      * Checks if value is classified as an arguments object.
@@ -10991,7 +10991,7 @@ declare namespace _ {
     isArguments(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isArray
+  // _.isArray
   interface LoDashStatic {
     /**
      * Checks if value is classified as an Array object.
@@ -11016,7 +11016,7 @@ declare namespace _ {
     isArray(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isArrayBuffer
+  // _.isArrayBuffer
   interface LoDashStatic {
     /**
      * Checks if value is classified as an ArrayBuffer object.
@@ -11041,7 +11041,7 @@ declare namespace _ {
     isArrayBuffer(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isArrayLike
+  // _.isArrayLike
   interface LoDashStatic {
     /**
      * Checks if `value` is array-like. A value is considered array-like if it's
@@ -11085,7 +11085,7 @@ declare namespace _ {
     isArrayLike(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isArrayLikeObject
+  // _.isArrayLikeObject
   interface LoDashStatic {
     /**
      * This method is like `_.isArrayLike` except that it also checks if `value`
@@ -11128,7 +11128,7 @@ declare namespace _ {
     isArrayLikeObject(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isBoolean
+  // _.isBoolean
   interface LoDashStatic {
     /**
      * Checks if value is classified as a boolean primitive or object.
@@ -11153,7 +11153,7 @@ declare namespace _ {
     isBoolean(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isBuffer
+  // _.isBuffer
   interface LoDashStatic {
     /**
      * Checks if value is a buffer.
@@ -11178,7 +11178,7 @@ declare namespace _ {
     isBuffer(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isDate
+  // _.isDate
   interface LoDashStatic {
     /**
      * Checks if value is classified as a Date object.
@@ -11203,7 +11203,7 @@ declare namespace _ {
     isDate(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isElement
+  // _.isElement
   interface LoDashStatic {
     /**
      * Checks if value is a DOM element.
@@ -11228,7 +11228,7 @@ declare namespace _ {
     isElement(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isEmpty
+  // _.isEmpty
   interface LoDashStatic {
     /**
      * Checks if value is empty. A value is considered empty unless it’s an arguments object, array, string, or
@@ -11254,7 +11254,7 @@ declare namespace _ {
     isEmpty(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isEqual
+  // _.isEqual
   interface LoDashStatic {
     /**
      * Performs a deep comparison between two values to determine if they are
@@ -11371,7 +11371,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isError
+  // _.isError
   interface LoDashStatic {
     /**
      * Checks if value is an Error, EvalError, RangeError, ReferenceError, SyntaxError, TypeError, or URIError
@@ -11397,7 +11397,7 @@ declare namespace _ {
     isError(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isFinite
+  // _.isFinite
   interface LoDashStatic {
     /**
      * Checks if value is a finite primitive number.
@@ -11424,7 +11424,7 @@ declare namespace _ {
     isFinite(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isFunction
+  // _.isFunction
   interface LoDashStatic {
     /**
      * Checks if value is classified as a Function object.
@@ -11449,7 +11449,7 @@ declare namespace _ {
     isFunction(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isInteger
+  // _.isInteger
   interface LoDashStatic {
     /**
      * Checks if `value` is an integer.
@@ -11492,7 +11492,7 @@ declare namespace _ {
     isInteger(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isLength
+  // _.isLength
   interface LoDashStatic {
     /**
      * Checks if `value` is a valid array-like length.
@@ -11535,7 +11535,7 @@ declare namespace _ {
     isLength(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isMap
+  // _.isMap
   interface LoDashStatic {
     /**
      * Checks if value is classified as a Map object.
@@ -11560,7 +11560,7 @@ declare namespace _ {
     isMap(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isMatch
+  // _.isMatch
   interface isMatchCustomizer {
     (value: any, other: any, indexOrKey?: number | string): boolean;
   }
@@ -11598,7 +11598,7 @@ declare namespace _ {
     isMatch(source: Object): boolean;
   }
 
-  //_.isMatchWith
+  // _.isMatchWith
   interface isMatchWithCustomizer {
     (value: any, other: any, indexOrKey?: number | string): boolean;
   }
@@ -11645,7 +11645,7 @@ declare namespace _ {
     isMatchWith(source: Object, customizer: isMatchWithCustomizer): boolean;
   }
 
-  //_.isNaN
+  // _.isNaN
   interface LoDashStatic {
     /**
      * Checks if value is NaN.
@@ -11672,7 +11672,7 @@ declare namespace _ {
     isNaN(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isNative
+  // _.isNative
   interface LoDashStatic {
     /**
      * Checks if value is a native function.
@@ -11697,7 +11697,7 @@ declare namespace _ {
     isNative(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isNil
+  // _.isNil
   interface LoDashStatic {
     /**
      * Checks if `value` is `null` or `undefined`.
@@ -11735,7 +11735,7 @@ declare namespace _ {
     isNil(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isNull
+  // _.isNull
   interface LoDashStatic {
     /**
      * Checks if value is null.
@@ -11760,7 +11760,7 @@ declare namespace _ {
     isNull(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isNumber
+  // _.isNumber
   interface LoDashStatic {
     /**
      * Checks if value is classified as a Number primitive or object.
@@ -11787,7 +11787,7 @@ declare namespace _ {
     isNumber(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isObject
+  // _.isObject
   interface LoDashStatic {
     /**
      * Checks if value is the language type of Object. (e.g. arrays, functions, objects, regexes, new Number(0),
@@ -11813,7 +11813,7 @@ declare namespace _ {
     isObject(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isObjectLike
+  // _.isObjectLike
   interface LoDashStatic {
     /**
      * Checks if `value` is object-like. A value is object-like if it's not `null`
@@ -11855,7 +11855,7 @@ declare namespace _ {
     isObjectLike(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isPlainObject
+  // _.isPlainObject
   interface LoDashStatic {
     /**
      * Checks if value is a plain object, that is, an object created by the Object constructor or one with a
@@ -11883,7 +11883,7 @@ declare namespace _ {
     isPlainObject(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isRegExp
+  // _.isRegExp
   interface LoDashStatic {
     /**
      * Checks if value is classified as a RegExp object.
@@ -11908,7 +11908,7 @@ declare namespace _ {
     isRegExp(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isSafeInteger
+  // _.isSafeInteger
   interface LoDashStatic {
     /**
      * Checks if `value` is a safe integer. An integer is safe if it's an IEEE-754
@@ -11952,7 +11952,7 @@ declare namespace _ {
     isSafeInteger(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isString
+  // _.isString
   interface LoDashStatic {
     /**
      * Checks if value is classified as a String primitive or object.
@@ -11977,7 +11977,7 @@ declare namespace _ {
     isString(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isSymbol
+  // _.isSymbol
   interface LoDashStatic {
     /**
      * Checks if `value` is classified as a `Symbol` primitive or object.
@@ -12012,7 +12012,7 @@ declare namespace _ {
     isSymbol(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isTypedArray
+  // _.isTypedArray
   interface LoDashStatic {
     /**
      * Checks if value is classified as a typed array.
@@ -12037,7 +12037,7 @@ declare namespace _ {
     isTypedArray(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.isUndefined
+  // _.isUndefined
   interface LoDashStatic {
     /**
      * Checks if value is undefined.
@@ -12062,7 +12062,7 @@ declare namespace _ {
     isUndefined(): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.lt
+  // _.lt
   interface LoDashStatic {
     /**
      * Checks if value is less than other.
@@ -12091,7 +12091,7 @@ declare namespace _ {
     lt(other: any): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.lte
+  // _.lte
   interface LoDashStatic {
     /**
      * Checks if value is less than or equal to other.
@@ -12120,7 +12120,7 @@ declare namespace _ {
     lte(other: any): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.toArray
+  // _.toArray
   interface LoDashStatic {
     /**
      * Converts value to an array.
@@ -12183,7 +12183,7 @@ declare namespace _ {
     toArray<TResult>(): LoDashExplicitArrayWrapper<TResult>;
   }
 
-  //_.toPlainObject
+  // _.toPlainObject
   interface LoDashStatic {
     /**
      * Converts value to a plain object flattening inherited enumerable properties of value to own properties
@@ -12202,7 +12202,7 @@ declare namespace _ {
     toPlainObject<TResult extends {}>(): LoDashImplicitObjectWrapper<TResult>;
   }
 
-  //_.toInteger
+  // _.toInteger
   interface LoDashStatic {
     /**
      * Converts `value` to an integer.
@@ -12245,7 +12245,7 @@ declare namespace _ {
     toInteger(): LoDashExplicitWrapper<number>;
   }
 
-  //_.toLength
+  // _.toLength
   interface LoDashStatic {
     /**
      * Converts `value` to an integer suitable for use as the length of an
@@ -12289,7 +12289,7 @@ declare namespace _ {
     toLength(): LoDashExplicitWrapper<number>;
   }
 
-  //_.toNumber
+  // _.toNumber
   interface LoDashStatic {
     /**
      * Converts `value` to a number.
@@ -12330,7 +12330,7 @@ declare namespace _ {
     toNumber(): LoDashExplicitWrapper<number>;
   }
 
-  //_.toSafeInteger
+  // _.toSafeInteger
   interface LoDashStatic {
     /**
      * Converts `value` to a safe integer. A safe integer can be compared and
@@ -12372,7 +12372,7 @@ declare namespace _ {
     toSafeInteger(): LoDashExplicitWrapper<number>;
   }
 
-  //_.toString DUMMY
+  // _.toString DUMMY
   interface LoDashStatic {
     /**
      * Converts `value` to a string if it's not one. An empty string is returned
@@ -12399,9 +12399,9 @@ declare namespace _ {
 
   /********
    * Math *
-   ********/
+   *******/
 
-  //_.add
+  // _.add
   interface LoDashStatic {
     /**
      * Adds two numbers.
@@ -12430,7 +12430,7 @@ declare namespace _ {
     add(addend: number): LoDashExplicitWrapper<number>;
   }
 
-  //_.ceil
+  // _.ceil
   interface LoDashStatic {
     /**
      * Calculates n rounded up to precision.
@@ -12459,7 +12459,7 @@ declare namespace _ {
     ceil(precision?: number): LoDashExplicitWrapper<number>;
   }
 
-  //_.floor
+  // _.floor
   interface LoDashStatic {
     /**
      * Calculates n rounded down to precision.
@@ -12488,7 +12488,7 @@ declare namespace _ {
     floor(precision?: number): LoDashExplicitWrapper<number>;
   }
 
-  //_.max
+  // _.max
   interface LoDashStatic {
     /**
      * Computes the maximum value of `array`. If `array` is empty or falsey
@@ -12519,7 +12519,7 @@ declare namespace _ {
     max<T>(): T;
   }
 
-  //_.maxBy
+  // _.maxBy
   interface LoDashStatic {
     /**
      * This method is like `_.max` except that it accepts `iteratee` which is
@@ -12621,7 +12621,7 @@ declare namespace _ {
     ): T;
   }
 
-  //_.mean
+  // _.mean
   interface LoDashStatic {
     /**
      * Computes the mean of the values in `array`.
@@ -12653,7 +12653,7 @@ declare namespace _ {
     mean(): number;
   }
 
-  //_.min
+  // _.min
   interface LoDashStatic {
     /**
      * Computes the minimum value of `array`. If `array` is empty or falsey
@@ -12684,7 +12684,7 @@ declare namespace _ {
     min<T>(): T;
   }
 
-  //_.minBy
+  // _.minBy
   interface LoDashStatic {
     /**
      * This method is like `_.min` except that it accepts `iteratee` which is
@@ -12786,7 +12786,7 @@ declare namespace _ {
     ): T;
   }
 
-  //_.round
+  // _.round
   interface LoDashStatic {
     /**
      * Calculates n rounded to precision.
@@ -12815,7 +12815,7 @@ declare namespace _ {
     round(precision?: number): LoDashExplicitWrapper<number>;
   }
 
-  //_.sum
+  // _.sum
   interface LoDashStatic {
     /**
      * Computes the sum of the values in `array`.
@@ -12848,7 +12848,7 @@ declare namespace _ {
   interface LoDashImplicitObjectWrapper<T> {
     /**
      * @see _.sum
-     **/
+     */
     sum<TValue>(): number;
 
     /**
@@ -12876,7 +12876,7 @@ declare namespace _ {
     sum(): LoDashExplicitWrapper<number>;
   }
 
-  //_.sumBy
+  // _.sumBy
   interface LoDashStatic {
     /**
      * This method is like `_.sum` except that it accepts `iteratee` which is
@@ -12907,7 +12907,7 @@ declare namespace _ {
 
     /**
      * @see _.sumBy
-     **/
+     */
     sumBy<T>(
       collection: Dictionary<T>,
       iteratee: DictionaryIterator<T, number>
@@ -12954,7 +12954,7 @@ declare namespace _ {
   interface LoDashImplicitObjectWrapper<T> {
     /**
      * @see _.sumBy
-     **/
+     */
     sumBy<TValue>(
       iteratee: ListIterator<TValue, number> | DictionaryIterator<TValue, number>
     ): number;
@@ -13010,9 +13010,9 @@ declare namespace _ {
 
   /**********
    * Number *
-   **********/
+   *********/
 
-  //_.subtract
+  // _.subtract
   interface LoDashStatic {
     /**
      * Subtract two numbers.
@@ -13052,7 +13052,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<number>;
   }
 
-  //_.clamp
+  // _.clamp
   interface LoDashStatic {
     /**
      * Clamps `number` within the inclusive `lower` and `upper` bounds.
@@ -13099,7 +13099,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<number>;
   }
 
-  //_.inRange
+  // _.inRange
   interface LoDashStatic {
     /**
      * Checks if n is between start and up to but not including, end. If end is not specified it’s set to start
@@ -13156,7 +13156,7 @@ declare namespace _ {
     inRange(end: number): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.random
+  // _.random
   interface LoDashStatic {
     /**
      * Produces a random number between min and max (inclusive). If only one argument is provided a number between
@@ -13220,9 +13220,9 @@ declare namespace _ {
 
   /**********
    * Object *
-   **********/
+   *********/
 
-  //_.assign
+  // _.assign
   interface LoDashStatic {
     /**
      * Assigns own enumerable properties of source objects to the destination
@@ -13396,7 +13396,7 @@ declare namespace _ {
     assign<TResult extends {}>(...otherArgs: any[]): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.assignWith
+  // _.assignWith
   interface AssignCustomizer {
     (objectValue: any, sourceValue: any, key?: string, object?: {}, source?: {}): any;
   }
@@ -13582,7 +13582,7 @@ declare namespace _ {
     assignWith<TResult extends {}>(...otherArgs: any[]): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.assignIn
+  // _.assignIn
   interface LoDashStatic {
     /**
      * This method is like `_.assign` except that it iterates over own and
@@ -13755,7 +13755,7 @@ declare namespace _ {
     assignIn<TResult extends {}>(...otherArgs: any[]): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.assignInWith
+  // _.assignInWith
   interface AssignCustomizer {
     (objectValue: any, sourceValue: any, key?: string, object?: {}, source?: {}): any;
   }
@@ -13942,7 +13942,7 @@ declare namespace _ {
     assignInWith<TResult extends {}>(...otherArgs: any[]): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.create
+  // _.create
   interface LoDashStatic {
     /**
      * Creates an object that inherits from the given prototype object. If a properties object is provided its own
@@ -13972,7 +13972,7 @@ declare namespace _ {
     create<U extends Object>(properties?: U): LoDashExplicitObjectWrapper<T & U>;
   }
 
-  //_.defaults
+  // _.defaults
   interface LoDashStatic {
     /**
      * Assigns own enumerable properties of source object(s) to the destination object for all destination
@@ -14141,14 +14141,14 @@ declare namespace _ {
     defaults<TResult>(...sources: {}[]): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.defaultsDeep
+  // _.defaultsDeep
   interface LoDashStatic {
     /**
      * This method is like _.defaults except that it recursively assigns default properties.
      * @param object The destination object.
      * @param sources The source objects.
      * @return Returns object.
-     **/
+     */
     defaultsDeep<T, TResult>(
       object: T,
       ...sources: any[]): TResult;
@@ -14157,11 +14157,11 @@ declare namespace _ {
   interface LoDashImplicitObjectWrapper<T> {
     /**
      * @see _.defaultsDeep
-     **/
-    defaultsDeep<TResult>(...sources: any[]): LoDashImplicitObjectWrapper<TResult>
+     */
+    defaultsDeep<TResult>(...sources: any[]): LoDashImplicitObjectWrapper<TResult>;
   }
 
-  //_.extend
+  // _.extend
   interface LoDashStatic {
     /**
      * @see assign
@@ -14332,7 +14332,7 @@ declare namespace _ {
     extend<TResult extends {}>(...otherArgs: any[]): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.findKey
+  // _.findKey
   interface LoDashStatic {
     /**
      * This method is like _.find except that it returns the key of the first element predicate returns truthy for
@@ -14451,7 +14451,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<string>;
   }
 
-  //_.findLastKey
+  // _.findLastKey
   interface LoDashStatic {
     /**
      * This method is like _.findKey except that it iterates over elements of a collection in the opposite order.
@@ -14569,7 +14569,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<string>;
   }
 
-  //_.forIn
+  // _.forIn
   interface LoDashStatic {
     /**
      * Iterates over own and inherited enumerable properties of an object invoking iteratee for each property. The
@@ -14617,7 +14617,7 @@ declare namespace _ {
     ): _.LoDashExplicitObjectWrapper<T>;
   }
 
-  //_.forInRight
+  // _.forInRight
   interface LoDashStatic {
     /**
      * This method is like _.forIn except that it iterates over properties of object in the opposite order.
@@ -14663,7 +14663,7 @@ declare namespace _ {
     ): _.LoDashExplicitObjectWrapper<T>;
   }
 
-  //_.forOwn
+  // _.forOwn
   interface LoDashStatic {
     /**
      * Iterates over own enumerable properties of an object invoking iteratee for each property. The iteratee is
@@ -14711,7 +14711,7 @@ declare namespace _ {
     ): _.LoDashExplicitObjectWrapper<T>;
   }
 
-  //_.forOwnRight
+  // _.forOwnRight
   interface LoDashStatic {
     /**
      * This method is like _.forOwn except that it iterates over properties of object in the opposite order.
@@ -14757,7 +14757,7 @@ declare namespace _ {
     ): _.LoDashExplicitObjectWrapper<T>;
   }
 
-  //_.functions
+  // _.functions
   interface LoDashStatic {
     /**
      * Creates an array of function property names from own enumerable properties
@@ -14797,7 +14797,7 @@ declare namespace _ {
     functions(): _.LoDashExplicitArrayWrapper<string>;
   }
 
-  //_.functionsIn
+  // _.functionsIn
   interface LoDashStatic {
     /**
      * Creates an array of function property names from own and inherited
@@ -14837,7 +14837,7 @@ declare namespace _ {
     functionsIn(): _.LoDashExplicitArrayWrapper<string>;
   }
 
-  //_.get
+  // _.get
   interface LoDashStatic {
     /**
      * Gets the property value at path of object. If the resolved
@@ -14846,7 +14846,7 @@ declare namespace _ {
      * @param path The path of the property to get.
      * @param defaultValue The value returned if the resolved value is undefined.
      * @return Returns the resolved value.
-     **/
+     */
     get<TResult>(object: Object,
       path: string | number | boolean | Array<string | number | boolean>,
       defaultValue?: TResult
@@ -14856,13 +14856,13 @@ declare namespace _ {
   interface LoDashImplicitObjectWrapper<T> {
     /**
      * @see _.get
-     **/
+     */
     get<TResult>(path: string | number | boolean | Array<string | number | boolean>,
       defaultValue?: TResult
     ): TResult;
   }
 
-  //_.has
+  // _.has
   interface LoDashStatic {
     /**
      * Checks if `path` is a direct property of `object`.
@@ -14910,7 +14910,7 @@ declare namespace _ {
     has(path: StringRepresentable | StringRepresentable[]): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.hasIn
+  // _.hasIn
   interface LoDashStatic {
     /**
      * Checks if `path` is a direct or inherited property of `object`.
@@ -14957,7 +14957,7 @@ declare namespace _ {
     hasIn(path: StringRepresentable | StringRepresentable[]): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.invert
+  // _.invert
   interface LoDashStatic {
     /**
      * Creates an object composed of the inverted keys and values of object. If object contains duplicate values,
@@ -14995,7 +14995,7 @@ declare namespace _ {
     invert<TResult extends {}>(multiValue?: boolean): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.inverBy
+  // _.inverBy
   interface InvertByIterator<T> {
     (value: T): any;
   }
@@ -15122,7 +15122,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<Dictionary<string[]>>;
   }
 
-  //_.keys
+  // _.keys
   interface LoDashStatic {
     /**
      * Creates an array of the own enumerable property names of object.
@@ -15149,7 +15149,7 @@ declare namespace _ {
     keys(): LoDashExplicitArrayWrapper<string>;
   }
 
-  //_.keysIn
+  // _.keysIn
   interface LoDashStatic {
     /**
      * Creates an array of the own and inherited enumerable property names of object.
@@ -15176,7 +15176,7 @@ declare namespace _ {
     keysIn(): LoDashExplicitArrayWrapper<string>;
   }
 
-  //_.mapKeys
+  // _.mapKeys
   interface LoDashStatic {
     /**
      * The opposite of _.mapValues; this method creates an object with the same values as object and keys generated
@@ -15320,27 +15320,27 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<Dictionary<TResult>>;
   }
 
-  //_.mapValues
+  // _.mapValues
   interface LoDashStatic {
     /**
-    * Creates an object with the same keys as object and values generated by running each own
-    * enumerable property of object through iteratee. The iteratee function is bound to thisArg
-    * and invoked with three arguments: (value, key, object).
-    *
-    * If a property name is provided iteratee the created "_.property" style callback returns
-    * the property value of the given element.
-    *
-    * If a value is also provided for thisArg the creted "_.matchesProperty" style callback returns
-    * true for elements that have a matching property value, else false;.
-    *
-    * If an object is provided for iteratee the created "_.matches" style callback returns true
-    * for elements that have the properties of the given object, else false.
-    *
-    * @param {Object} object The object to iterate over.
-    * @param {Function|Object|string} [iteratee=_.identity]  The function invoked per iteration.
-    * @param {Object} [thisArg] The `this` binding of `iteratee`.
-    * @return {Object} Returns the new mapped object.
-    */
+     * Creates an object with the same keys as object and values generated by running each own
+     * enumerable property of object through iteratee. The iteratee function is bound to thisArg
+     * and invoked with three arguments: (value, key, object).
+     *
+     * If a property name is provided iteratee the created "_.property" style callback returns
+     * the property value of the given element.
+     *
+     * If a value is also provided for thisArg the creted "_.matchesProperty" style callback returns
+     * true for elements that have a matching property value, else false;.
+     *
+     * If an object is provided for iteratee the created "_.matches" style callback returns true
+     * for elements that have the properties of the given object, else false.
+     *
+     * @param {Object} object The object to iterate over.
+     * @param {Function|Object|string} [iteratee=_.identity]  The function invoked per iteration.
+     * @param {Object} [thisArg] The `this` binding of `iteratee`.
+     * @return {Object} Returns the new mapped object.
+     */
     mapValues<T, TResult>(obj: Dictionary<T>, callback: ObjectIterator<T, TResult>, thisArg?: any): Dictionary<TResult>;
     mapValues<T>(obj: Dictionary<T>, where: Dictionary<T>): Dictionary<boolean>;
     mapValues<T, TMapped>(obj: T, pluck: string): TMapped;
@@ -15377,7 +15377,7 @@ declare namespace _ {
     mapValues<TResult>(where: Dictionary<TResult>): LoDashImplicitArrayWrapper<boolean>;
   }
 
-  //_.merge
+  // _.merge
   interface LoDashStatic {
     /**
      * Recursively merges own and inherited enumerable properties of source
@@ -15534,7 +15534,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.mergeWith
+  // _.mergeWith
   interface MergeWithCustomizer {
     (value: any, srcValue: any, key?: string, object?: Object, source?: Object): any;
   }
@@ -15670,7 +15670,7 @@ declare namespace _ {
     ): LoDashImplicitObjectWrapper<TResult>;
   }
 
-  //_.omit
+  // _.omit
   interface LoDashStatic {
     /**
      * The opposite of `_.pick`; this method creates an object composed of the
@@ -15717,7 +15717,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.omitBy
+  // _.omitBy
   interface LoDashStatic {
     /**
      * The opposite of `_.pickBy`; this method creates an object composed of the
@@ -15761,7 +15761,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.pick
+  // _.pick
   interface LoDashStatic {
     /**
      * Creates an object composed of the picked `object` properties.
@@ -15804,7 +15804,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.pickBy
+  // _.pickBy
   interface LoDashStatic {
     /**
      * Creates an object composed of the `object` properties `predicate` returns
@@ -15847,7 +15847,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.result
+  // _.result
   interface LoDashStatic {
     /**
      * This method is like _.get except that if the resolved value is a function it’s invoked with the this binding
@@ -15875,7 +15875,7 @@ declare namespace _ {
     ): TResult;
   }
 
-  //_.set
+  // _.set
   interface LoDashStatic {
     /**
      * Sets the value at path of object. If a portion of path doesn’t exist it’s created. Arrays are created for
@@ -15948,7 +15948,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.setWith
+  // _.setWith
   interface SetWithCustomizer<T> {
     (nsValue: any, key: string, nsObject: T): any;
   }
@@ -16033,7 +16033,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.toPairs
+  // _.toPairs
   interface LoDashStatic {
     /**
      * Creates an array of own enumerable key-value pairs for object.
@@ -16060,7 +16060,7 @@ declare namespace _ {
     toPairs<TResult>(): LoDashExplicitArrayWrapper<TResult[]>;
   }
 
-  //_.toPairsIn
+  // _.toPairsIn
   interface LoDashStatic {
     /**
      * Creates an array of own and inherited enumerable key-value pairs for object.
@@ -16087,7 +16087,7 @@ declare namespace _ {
     toPairsIn<TResult>(): LoDashExplicitArrayWrapper<TResult[]>;
   }
 
-  //_.transform
+  // _.transform
   interface LoDashStatic {
     /**
      * An alternative to _.reduce; this method transforms object to a new accumulator object which is the result of
@@ -16179,7 +16179,7 @@ declare namespace _ {
     ): LoDashImplicitArrayWrapper<TResult>;
   }
 
-  //_.unset
+  // _.unset
   interface LoDashStatic {
     /**
      * Removes the property at path of object.
@@ -16210,7 +16210,7 @@ declare namespace _ {
     unset(path: StringRepresentable | StringRepresentable[]): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.values
+  // _.values
   interface LoDashStatic {
     /**
      * Creates an array of the own enumerable property values of object.
@@ -16235,7 +16235,7 @@ declare namespace _ {
     values<T>(): LoDashExplicitArrayWrapper<T>;
   }
 
-  //_.valuesIn
+  // _.valuesIn
   interface LoDashStatic {
     /**
      * Creates an array of the own and inherited enumerable property values of object.
@@ -16262,9 +16262,9 @@ declare namespace _ {
 
   /**********
    * String *
-   **********/
+   *********/
 
-  //_.camelCase
+  // _.camelCase
   interface LoDashStatic {
     /**
      * Converts string to camel case.
@@ -16289,7 +16289,7 @@ declare namespace _ {
     camelCase(): LoDashExplicitWrapper<string>;
   }
 
-  //_.capitalize
+  // _.capitalize
   interface LoDashStatic {
     /**
      * Converts the first character of string to upper case and the remaining to lower case.
@@ -16314,7 +16314,7 @@ declare namespace _ {
     capitalize(): LoDashExplicitWrapper<string>;
   }
 
-  //_.deburr
+  // _.deburr
   interface LoDashStatic {
     /**
      * Deburrs string by converting latin-1 supplementary letters to basic latin letters and removing combining
@@ -16340,7 +16340,7 @@ declare namespace _ {
     deburr(): LoDashExplicitWrapper<string>;
   }
 
-  //_.endsWith
+  // _.endsWith
   interface LoDashStatic {
     /**
      * Checks if string ends with the given target string.
@@ -16439,7 +16439,7 @@ declare namespace _ {
     escapeRegExp(): LoDashExplicitWrapper<string>;
   }
 
-  //_.kebabCase
+  // _.kebabCase
   interface LoDashStatic {
     /**
      * Converts string to kebab case.
@@ -16464,7 +16464,7 @@ declare namespace _ {
     kebabCase(): LoDashExplicitWrapper<string>;
   }
 
-  //_.lowerCase
+  // _.lowerCase
   interface LoDashStatic {
     /**
      * Converts `string`, as space separated words, to lower case.
@@ -16489,7 +16489,7 @@ declare namespace _ {
     lowerCase(): LoDashExplicitWrapper<string>;
   }
 
-  //_.lowerFirst
+  // _.lowerFirst
   interface LoDashStatic {
     /**
      * Converts the first character of `string` to lower case.
@@ -16514,7 +16514,7 @@ declare namespace _ {
     lowerFirst(): LoDashExplicitWrapper<string>;
   }
 
-  //_.pad
+  // _.pad
   interface LoDashStatic {
     /**
      * Pads string on the left and right sides if it’s shorter than length. Padding characters are truncated if
@@ -16552,7 +16552,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<string>;
   }
 
-  //_.padEnd
+  // _.padEnd
   interface LoDashStatic {
     /**
      * Pads string on the right side if it’s shorter than length. Padding characters are truncated if they exceed
@@ -16590,7 +16590,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<string>;
   }
 
-  //_.padStart
+  // _.padStart
   interface LoDashStatic {
     /**
      * Pads string on the left side if it’s shorter than length. Padding characters are truncated if they exceed
@@ -16628,7 +16628,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<string>;
   }
 
-  //_.parseInt
+  // _.parseInt
   interface LoDashStatic {
     /**
      * Converts string to an integer of the specified radix. If radix is undefined or 0, a radix of 10 is used
@@ -16660,7 +16660,7 @@ declare namespace _ {
     parseInt(radix?: number): LoDashExplicitWrapper<number>;
   }
 
-  //_.repeat
+  // _.repeat
   interface LoDashStatic {
     /**
      * Repeats the given string n times.
@@ -16689,7 +16689,7 @@ declare namespace _ {
     repeat(n?: number): LoDashExplicitWrapper<string>;
   }
 
-  //_.replace
+  // _.replace
   interface LoDashStatic {
     /**
      * Replaces matches for pattern in string with replacement.
@@ -16784,7 +16784,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<string>;
   }
 
-  //_.snakeCase
+  // _.snakeCase
   interface LoDashStatic {
     /**
      * Converts string to snake case.
@@ -16809,7 +16809,7 @@ declare namespace _ {
     snakeCase(): LoDashExplicitWrapper<string>;
   }
 
-  //_.split
+  // _.split
   interface LoDashStatic {
     /**
      * Splits string by separator.
@@ -16848,7 +16848,7 @@ declare namespace _ {
     ): LoDashExplicitArrayWrapper<string>;
   }
 
-  //_.startCase
+  // _.startCase
   interface LoDashStatic {
     /**
      * Converts string to start case.
@@ -16873,7 +16873,7 @@ declare namespace _ {
     startCase(): LoDashExplicitWrapper<string>;
   }
 
-  //_.startsWith
+  // _.startsWith
   interface LoDashStatic {
     /**
      * Checks if string starts with the given target string.
@@ -16910,7 +16910,7 @@ declare namespace _ {
     ): LoDashExplicitWrapper<boolean>;
   }
 
-  //_.template
+  // _.template
   interface TemplateOptions extends TemplateSettings {
     /**
      * The sourceURL of the template's compiled source.
@@ -16970,7 +16970,7 @@ declare namespace _ {
     template(options?: TemplateOptions): LoDashExplicitObjectWrapper<TemplateExecutor>;
   }
 
-  //_.toLower
+  // _.toLower
   interface LoDashStatic {
     /**
      * Converts `string`, as a whole, to lower case.
@@ -16995,7 +16995,7 @@ declare namespace _ {
     toLower(): LoDashExplicitWrapper<string>;
   }
 
-  //_.toUpper
+  // _.toUpper
   interface LoDashStatic {
     /**
      * Converts `string`, as a whole, to upper case.
@@ -17020,7 +17020,7 @@ declare namespace _ {
     toUpper(): LoDashExplicitWrapper<string>;
   }
 
-  //_.trim
+  // _.trim
   interface LoDashStatic {
     /**
      * Removes leading and trailing whitespace or specified characters from string.
@@ -17049,7 +17049,7 @@ declare namespace _ {
     trim(chars?: string): LoDashExplicitWrapper<string>;
   }
 
-  //_.trimEnd
+  // _.trimEnd
   interface LoDashStatic {
     /**
      * Removes trailing whitespace or specified characters from string.
@@ -17078,7 +17078,7 @@ declare namespace _ {
     trimEnd(chars?: string): LoDashExplicitWrapper<string>;
   }
 
-  //_.trimStart
+  // _.trimStart
   interface LoDashStatic {
     /**
      * Removes leading whitespace or specified characters from string.
@@ -17107,7 +17107,7 @@ declare namespace _ {
     trimStart(chars?: string): LoDashExplicitWrapper<string>;
   }
 
-  //_.truncate
+  // _.truncate
   interface TruncateOptions {
     /** The maximum string length. */
     length?: number;
@@ -17146,7 +17146,7 @@ declare namespace _ {
     truncate(options?: TruncateOptions): LoDashExplicitWrapper<string>;
   }
 
-  //_.unescape
+  // _.unescape
   interface LoDashStatic {
     /**
      * The inverse of _.escape; this method converts the HTML entities &amp;, &lt;, &gt;, &quot;, &#39;, and &#96;
@@ -17175,7 +17175,7 @@ declare namespace _ {
     unescape(): LoDashExplicitWrapper<string>;
   }
 
-  //_.upperCase
+  // _.upperCase
   interface LoDashStatic {
     /**
      * Converts `string`, as space separated words, to upper case.
@@ -17200,7 +17200,7 @@ declare namespace _ {
     upperCase(): LoDashExplicitWrapper<string>;
   }
 
-  //_.upperFirst
+  // _.upperFirst
   interface LoDashStatic {
     /**
      * Converts the first character of `string` to upper case.
@@ -17225,7 +17225,7 @@ declare namespace _ {
     upperFirst(): LoDashExplicitWrapper<string>;
   }
 
-  //_.words
+  // _.words
   interface LoDashStatic {
     /**
      * Splits `string` into an array of its words.
@@ -17256,9 +17256,9 @@ declare namespace _ {
 
   /***********
    * Utility *
-   ***********/
+   **********/
 
-  //_.attempt
+  // _.attempt
   interface LoDashStatic {
     /**
      * Attempts to invoke func, returning either the result or the caught error object. Any additional arguments
@@ -17284,7 +17284,7 @@ declare namespace _ {
     attempt<TResult>(...args: any[]): LoDashExplicitObjectWrapper<TResult | Error>;
   }
 
-  //_.constant
+  // _.constant
   interface LoDashStatic {
     /**
      * Creates a function that returns value.
@@ -17309,7 +17309,7 @@ declare namespace _ {
     constant<TResult>(): LoDashExplicitObjectWrapper<() => TResult>;
   }
 
-  //_.identity
+  // _.identity
   interface LoDashStatic {
     /**
      * This method returns the first argument provided to it.
@@ -17340,7 +17340,7 @@ declare namespace _ {
     identity(): T;
   }
 
-  //_.iteratee
+  // _.iteratee
   interface LoDashStatic {
     /**
      * Creates a function that invokes `func` with the arguments of the created
@@ -17436,7 +17436,7 @@ declare namespace _ {
     iteratee<TResult>(thisArg?: any): LoDashExplicitObjectWrapper<(...args: any[]) => TResult>;
   }
 
-  //_.matches
+  // _.matches
   interface LoDashStatic {
     /**
      * Creates a function that performs a deep comparison between a given object and source, returning true if the
@@ -17471,7 +17471,7 @@ declare namespace _ {
     matches<V>(): LoDashExplicitObjectWrapper<(value: V) => boolean>;
   }
 
-  //_.matchesProperty
+  // _.matchesProperty
   interface LoDashStatic {
     /**
      * Creates a function that compares the property value of path on a given object to value.
@@ -17529,7 +17529,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<(value: Value) => boolean>;
   }
 
-  //_.method
+  // _.method
   interface LoDashStatic {
     /**
      * Creates a function that invokes the method at path on a given object. Any additional arguments are provided
@@ -17601,7 +17601,7 @@ declare namespace _ {
     method<TResult>(...args: any[]): LoDashExplicitObjectWrapper<(object: any) => TResult>;
   }
 
-  //_.methodOf
+  // _.methodOf
   interface LoDashStatic {
     /**
      * The opposite of _.method; this method creates a function that invokes the method at a given path on object.
@@ -17643,7 +17643,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<(path: StringRepresentable | StringRepresentable[]) => TResult>;
   }
 
-  //_.mixin
+  // _.mixin
   interface MixinOptions {
     chain?: boolean;
   }
@@ -17711,7 +17711,7 @@ declare namespace _ {
     ): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.noConflict
+  // _.noConflict
   interface LoDashStatic {
     /**
      * Reverts the _ variable to its previous value and returns a reference to the lodash function.
@@ -17728,7 +17728,7 @@ declare namespace _ {
     noConflict(): typeof _;
   }
 
-  //_.noop
+  // _.noop
   interface LoDashStatic {
     /**
      * A no-operation function that returns undefined regardless of the arguments it receives.
@@ -17752,7 +17752,7 @@ declare namespace _ {
     noop(...args: any[]): _.LoDashExplicitWrapper<void>;
   }
 
-  //_.nthArg
+  // _.nthArg
   interface LoDashStatic {
     /**
      * Creates a function that returns its nth argument.
@@ -17777,7 +17777,7 @@ declare namespace _ {
     nthArg<TResult extends Function>(): LoDashExplicitObjectWrapper<TResult>;
   }
 
-  //_.over
+  // _.over
   interface LoDashStatic {
     /**
      * Creates a function that invokes iteratees with the arguments provided to the created function and returns
@@ -17817,7 +17817,7 @@ declare namespace _ {
     over<TResult>(...iteratees: (Function | Function[])[]): LoDashExplicitObjectWrapper<(...args: any[]) => TResult[]>;
   }
 
-  //_.overEvery
+  // _.overEvery
   interface LoDashStatic {
     /**
      * Creates a function that checks if all of the predicates return truthy when invoked with the arguments
@@ -17857,7 +17857,7 @@ declare namespace _ {
     overEvery(...predicates: (Function | Function[])[]): LoDashExplicitObjectWrapper<(...args: any[]) => boolean>;
   }
 
-  //_.overSome
+  // _.overSome
   interface LoDashStatic {
     /**
      * Creates a function that checks if any of the predicates return truthy when invoked with the arguments
@@ -17897,7 +17897,7 @@ declare namespace _ {
     overSome(...predicates: (Function | Function[])[]): LoDashExplicitObjectWrapper<(...args: any[]) => boolean>;
   }
 
-  //_.property
+  // _.property
   interface LoDashStatic {
     /**
      * Creates a function that returns the property value at path on a given object.
@@ -17936,7 +17936,7 @@ declare namespace _ {
     property<TObj, TResult>(): LoDashExplicitObjectWrapper<(obj: TObj) => TResult>;
   }
 
-  //_.propertyOf
+  // _.propertyOf
   interface LoDashStatic {
     /**
      * The opposite of _.property; this method creates a function that returns the property value at a given path
@@ -17962,7 +17962,7 @@ declare namespace _ {
     propertyOf(): LoDashExplicitObjectWrapper<(path: string | string[]) => any>;
   }
 
-  //_.range
+  // _.range
   interface LoDashStatic {
     /**
      * Creates an array of numbers (positive and/or negative) progressing from start up to, but not including, end.
@@ -18009,7 +18009,7 @@ declare namespace _ {
     ): LoDashExplicitArrayWrapper<number>;
   }
 
-  //_.rangeRight
+  // _.rangeRight
   interface LoDashStatic {
     /**
      * This method is like `_.range` except that it populates values in
@@ -18080,7 +18080,7 @@ declare namespace _ {
     ): LoDashExplicitArrayWrapper<number>;
   }
 
-  //_.runInContext
+  // _.runInContext
   interface LoDashStatic {
     /**
      * Create a new pristine lodash function using the given context object.
@@ -18098,7 +18098,7 @@ declare namespace _ {
     runInContext(): typeof _;
   }
 
-  //_.times
+  // _.times
   interface LoDashStatic {
     /**
      * Invokes the iteratee function n times, returning an array of the results of each invocation. The iteratee
@@ -18147,7 +18147,7 @@ declare namespace _ {
     times(): LoDashExplicitArrayWrapper<number>;
   }
 
-  //_.toPath
+  // _.toPath
   interface LoDashStatic {
     /**
      * Converts `value` to a property path array.
@@ -18191,7 +18191,7 @@ declare namespace _ {
     toPath(): LoDashExplicitWrapper<string[]>;
   }
 
-  //_.uniqueId
+  // _.uniqueId
   interface LoDashStatic {
     /**
      * Generates a unique ID. If prefix is provided the ID is appended to it.
@@ -18250,7 +18250,7 @@ declare namespace _ {
     (acc: TResult, curr: T, key?: string, dict?: Dictionary<T>): void;
   }
 
-  //interface Collection<T> {}
+  // interface Collection<T> {}
 
   // Common interface between Arrays and jQuery objects
   interface List<T> {
