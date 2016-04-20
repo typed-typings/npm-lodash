@@ -195,7 +195,7 @@ Methods:
 - [ ] _.differenceBy
 - [ ] _.differenceWith
 - [ ] _.flatMap
-- [ ] _.fromPairs
+- [x] _.fromPairs
 - [ ] _.intersectionBy
 - [ ] _.intersectionWith
 - [ ] _.join
@@ -2034,7 +2034,7 @@ declare namespace _ {
     flattenDeep<T>(): LoDashExplicitArrayWrapper<T>;
   }
 
-  // _.fromPairs DUMMY
+  // _.fromPairs
   interface LoDashStatic {
     /**
      * The inverse of `_.toPairs`; this method returns an object composed
@@ -2050,9 +2050,9 @@ declare namespace _ {
      * _.fromPairs([['fred', 30], ['barney', 40]]);
      * // => { 'fred': 30, 'barney': 40 }
      */
-    fromPairs(
-      array: any[] | List<any>
-    ): any[];
+    fromPairs<T>(
+      array: Array<[string, T]> | List<[string, T]>
+    ): Dictionary<T>;
   }
 
   // _.head
