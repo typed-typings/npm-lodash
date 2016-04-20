@@ -18277,3 +18277,7 @@ declare namespace _ {
 
 // Backward compatibility with --target es5
 declare interface Map<K, V> { }
+
+declare module 'lodash' {
+  export = _;
+}
