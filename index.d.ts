@@ -12904,7 +12904,15 @@ declare namespace _ {
       collection: List<T>,
       iteratee: ListIterator<T, number>
     ): number;
-
+    
+    /**
+     * @see _.sumBy
+     */
+    sumBy<T>(
+      collection: List<T>,
+      iteratee: string
+    ): number;
+    
     /**
      * @see _.sumBy
      */
