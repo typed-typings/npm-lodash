@@ -12909,6 +12909,14 @@ declare namespace _ {
      * @see _.sumBy
      */
     sumBy<T>(
+      collection: List<T>,
+      iteratee: string
+    ): number;
+
+    /**
+     * @see _.sumBy
+     */
+    sumBy<T>(
       collection: Dictionary<T>,
       iteratee: DictionaryIterator<T, number>
     ): number;
