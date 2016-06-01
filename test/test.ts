@@ -1,5 +1,5 @@
-import * as _ from 'lodash';
-import * as test from 'blue-tape';
+import test = require('blue-tape');
+import _ = require('lodash');
 
 interface Dictionary<T> {
   [index: string]: T;
