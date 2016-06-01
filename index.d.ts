@@ -2051,8 +2051,22 @@ declare namespace _ {
      * // => { 'fred': 30, 'barney': 40 }
      */
     fromPairs<T>(
-      array: Array<[string, T]> | List<[string, T]>
+      pairs: Array<[string, T]> | List<[string, T]>
     ): Dictionary<T>;
+  }
+
+  interface LoDashImplicitArrayWrapper<T> {
+    /**
+     * @see _.fromPairs
+     */
+    fromPairs<TResult>(): LoDashImplicitObjectWrapper<Dictionary<TResult>>;
+  }
+
+  interface LoDashExplicitArrayWrapper<T> {
+    /**
+     * @see _.fromPairs
+     */
+    fromPairs<TResult>(): LoDashExplicitObjectWrapper<Dictionary<TResult>>;
   }
 
   // _.head
