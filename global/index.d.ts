@@ -10635,7 +10635,7 @@ declare namespace _ {
      * @param value The value to inspect.
      * @return Returns the cast array.
      */
-    castArray<T>(value: T): T[];
+    castArray<T>(value: T | T[]): T[];
   }
 
   interface LoDashImplicitWrapper<T> {
