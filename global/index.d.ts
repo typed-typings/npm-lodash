@@ -1888,7 +1888,7 @@ declare namespace _ {
   interface RecursiveArray<T> extends Array<T | RecursiveArray<T>> { }
   interface ListOfRecursiveArraysOrValues<T> extends List<T | RecursiveArray<T>> { }
 
-  //_.flatMap
+  // _.flatMap
   interface LoDashStatic {
       /**
        * Creates an array of flattened values by running each element in collection through iteratee
