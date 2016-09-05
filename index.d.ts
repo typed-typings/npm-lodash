@@ -1885,6 +1885,13 @@ declare namespace _ {
     first<TResult>(): TResult;
   }
 
+  interface LoDashExplicitArrayWrapper<T> {
+    /**
+     * @see _.head
+     */
+    first(): LoDashExplicitWrapper<T>;
+  }
+
   interface RecursiveArray<T> extends Array<T | RecursiveArray<T>> { }
   interface ListOfRecursiveArraysOrValues<T> extends List<T | RecursiveArray<T>> { }
 
@@ -2778,6 +2785,13 @@ declare namespace _ {
      * @see _.last
      */
     last<T>(): LoDashExplicitObjectWrapper<T>;
+  }
+
+  interface LoDashExplicitArrayWrapper<T> {
+    /**
+     * @see _.head
+     */
+    last(): LoDashExplicitWrapper<T>;
   }
 
   // _.lastIndexOf
