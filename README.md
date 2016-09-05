@@ -1,4 +1,4 @@
-# Typed Lodash [![Build Status](https://travis-ci.org/typed-typings/npm-lodash.svg?branch=master)](https://travis-ci.org/typed-typings/npm-lodash)
+# Typed Lodash [![Build Status](https://travis-ci.org/typed-typings/npm-lodash.svg?branch=master)](https://travis-ci.org/types/npm-lodash)
 
 
 The type definition for [lodash](https://github.com/lodash/lodash).
