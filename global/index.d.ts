@@ -16293,23 +16293,23 @@ declare namespace _ {
      * @param object The object to query.
      * @return Returns the new array of key-value pairs.
      */
-    toPairs<T extends {}>(object?: T): any[][];
+    pairs<T extends {}>(object?: T): any[][];
 
-    toPairs<T extends {}, TResult>(object?: T): TResult[][];
+    pairs<T extends {}, TResult>(object?: T): TResult[][];
   }
 
   interface LoDashImplicitObjectWrapper<T> {
     /**
      * @see _.toPairs
      */
-    toPairs<TResult>(): LoDashImplicitArrayWrapper<TResult[]>;
+    pairs<TResult>(): LoDashImplicitArrayWrapper<TResult[]>;
   }
 
   interface LoDashExplicitObjectWrapper<T> {
     /**
      * @see _.toPairs
      */
-    toPairs<TResult>(): LoDashExplicitArrayWrapper<TResult[]>;
+    pairs<TResult>(): LoDashExplicitArrayWrapper<TResult[]>;
   }
 
   // _.toPairsIn
