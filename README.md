@@ -1,5 +1,7 @@
 # Typed Lodash [![Build Status](https://travis-ci.org/types/npm-lodash.svg?branch=master)](https://travis-ci.org/types/npm-lodash)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/types/npm-lodash.svg)](https://greenkeeper.io/)
+
 
 The type definition for [lodash](https://github.com/lodash/lodash).
 
