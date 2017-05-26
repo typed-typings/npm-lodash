@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "blue-tape": "^1.0.0",
-    "chai": "^3.5.0",
+    "chai": "^4.0.0",
     "mocha": "^3.3.0",
     "onchange": "^3.2.1",
     "tap-spec": "^4.1.1",
