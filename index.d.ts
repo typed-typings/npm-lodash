@@ -15133,7 +15133,16 @@ declare namespace _ {
      */
     get<TResult>(path: string | number | boolean | Array<string | number | boolean>,
       defaultValue?: TResult
-    ): TResult;
+    ): LoDashImplicitWrapper<TResult>;
+  }
+
+  interface LoDashExplicitObjectWrapper<T> {
+    /**
+     * @see _.get
+     */
+    get<TResult>(path: string | number | boolean | Array<string | number | boolean>,
+      defaultValue?: TResult
+    ): LoDashExplicitObjectWrapper<TResult>;
   }
 
   // _.has
