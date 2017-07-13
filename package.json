@@ -12,15 +12,14 @@
     "@types/blue-tape": "^0.1.31",
     "@types/node": "^8.0.11",
     "blue-tape": "^1.0.0",
-    "chai": "^4.0.0",
+    "chai": "^4.1.0",
     "lodash": "^4.17.4",
-    "mocha": "^3.3.0",
+    "mocha": "^3.4.2",
     "onchange": "^3.2.1",
     "tap-spec": "^4.1.1",
-    "ts-node": "^3.0.3",
-    "tslint": "^5.2.0",
+    "ts-node": "^3.2.0",
+    "tslint": "^5.5.0",
     "tslint-config-typings": "^0.3.1",
-    "typescript": "^2.3.2",
-    "typings": "^2.1.1"
+    "typescript": "^2.4.1"
   }
 }
