@@ -9,5 +9,4 @@ node_js:
   - "stable"
 
 script:
-  - npm link ./source
-  - npm run lint+build+test
+  - npm run verify
