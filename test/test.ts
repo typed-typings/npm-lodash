@@ -5,12 +5,12 @@ interface Dictionary<T> {
   [index: string]: T;
 }
 
-test('test', (t) => {
+test('test', t => {
   t.plan(1);
   t.equal(_.add(1, 2), 3);
 });
 
-test('pairs', (t) => {
+test('pairs', t => {
   t.plan(7);
 
   let pairs = [['fred', 30], ['barney', 40]] as Array<[string, number]>;
