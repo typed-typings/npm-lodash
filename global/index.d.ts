@@ -11568,7 +11568,7 @@ declare namespace _ {
     /**
      * This method is like `_.isEqual` except that it accepts `customizer` which is
      * invoked to compare values. If `customizer` returns `undefined` comparisons are
-     * handled by the method instead. The `customizer` is invoked with up to seven arguments:
+     * handled by the method instead. The `customizer` is invoked with up to six arguments:
      * (objValue, othValue [, index|key, object, other, stack]).
      *
      * @static
@@ -15796,7 +15796,7 @@ declare namespace _ {
      * This method is like `_.merge` except that it accepts `customizer` which
      * is invoked to produce the merged values of the destination and source
      * properties. If `customizer` returns `undefined` merging is handled by the
-     * method instead. The `customizer` is invoked with seven arguments:
+     * method instead. The `customizer` is invoked with six arguments:
      * (objValue, srcValue, key, object, source, stack).
      *
      * @static
