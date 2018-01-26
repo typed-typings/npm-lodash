@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@types/blue-tape": "^0.1.31",
-    "@types/node": "^8.0.11",
+    "@types/node": "^9.3.0",
     "blue-tape": "^1.0.0",
     "chai": "^4.1.0",
     "lodash": "^4.17.4",
